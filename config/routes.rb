@@ -3,6 +3,8 @@ Rails.application.routes.draw do
    namespace :v1 do
     resources :groups
     resources :artists
+    resources :albums
+    resources :songs
     end
   end
 end
