@@ -1,51 +1,43 @@
-class GroupsController < ApplicationController
-  before_action :set_group, only: [:show, :update, :destroy]
+class Api::V1::GroupsController < ApplicationController
+	before_action :set_group, only: [:show, :update, :destroy]
 
-  # GET /groups
-  def index
-    @groups = Group.all
+	def index
+		@groups = Group.all
+		render json: @groups
+	end
 
-    render json: @groups
-  end
+	def show
+		render json: @groups
+	end
 
-  # GET /groups/1
-  def show
-    render json: @group
-  end
+	def create
+		@group = Group.new(group_params)
+		if @group.save
+			render json: @group, status: :created, location: api_v1_article_url(@group)
+		else
+			render json: @group.errors, status: :unprocessable_entity
+		end
+	end
 
-  # POST /groups
-  def create
-    @group = Group.new(group_params)
+	def update
+		if @group.update(group_params)
+			render json: @group
+		else
+			render json: @group.errors, status: :unprocessable_entity
+		end
+	end
 
-    if @group.save
-      render json: @group, status: :created, location: @group
-    else
-      render json: @group.errors, status: :unprocessable_entity
-    end
-  end
+	def destroy
+		@group.destroy
+	end
 
-  # PATCH/PUT /groups/1
-  def update
-    if @group.update(group_params)
-      render json: @group
-    else
-      render json: @group.errors, status: :unprocessable_entity
-    end
-  end
+	private
 
-  # DELETE /groups/1
-  def destroy
-    @group.destroy
-  end
+	def set_article
+		@group = Group.find(params[:id])
+	end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_group
-      @group = Group.find(params[:id])
-    end
-
-    # Only allow a trusted parameter "white list" through.
-    def group_params
-      params.require(:group).permit(:name)
-    end
+	def group_params
+		params.require(:group).permit(:name)
+	end
 end

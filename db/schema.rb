@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180727203352) do
+ActiveRecord::Schema.define(version: 20180728032712) do
+
+  create_table "artists", force: :cascade do |t|
+    t.string   "name"
+    t.string   "position"
+    t.boolean  "active_member"
+    t.integer  "group_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["group_id"], name: "index_artists_on_group_id"
+  end
 
   create_table "groups", force: :cascade do |t|
     t.string   "name"
