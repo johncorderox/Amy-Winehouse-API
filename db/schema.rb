@@ -10,17 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180728202704) do
+ActiveRecord::Schema.define(version: 20180808221513) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "name"
-    t.string   "release_date"
     t.integer  "artist_id"
-    t.integer  "group_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["artist_id"], name: "index_albums_on_artist_id"
-    t.index ["group_id"], name: "index_albums_on_group_id"
   end
 
   create_table "artists", force: :cascade do |t|

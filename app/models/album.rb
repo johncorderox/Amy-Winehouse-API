@@ -1,4 +1,6 @@
 class Album < ApplicationRecord
   belongs_to :artist
-  belongs_to :group
+
+  validates :name, presence: true, length: {maximum: 1}
+
 end
