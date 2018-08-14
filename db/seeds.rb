@@ -1,17 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
 # Groups
 Group.create(name: "Beach House")
 
 # Artists
-Artist.create(name: "Victoria Legrand", position: "Vocalist", active_member: true)
-Artist.create(name: "Alex Scally", position: "Guitarist", active_member: true)
-Artist.create(name: "Daniel Franz", position: "Drummer", active_member: false)
+Artist.create(name: "Victoria Legrand", position: "Vocalist", active_member: true, group: Group.first)
+Artist.create(name: "Alex Scally", position: "Guitarist", active_member: true, group: Group.first)
+Artist.create(name: "Daniel Franz", position: "Drummer", active_member: false, group: Group.first)
 
 # Albums
 Album.create(name: "Beach House", artist: Artist.first)
