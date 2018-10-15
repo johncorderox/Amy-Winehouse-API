@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class DemoButtons extends Component {
 
   state = {
-    results: undefined
+    results: []
   }
 
   getSongs = async(e) => {
@@ -15,13 +16,17 @@ class DemoButtons extends Component {
 
   }
 
-  getAlbums = async(e) => {
+  getAlbums = async() => {
 
-    e.preventDefault();
+    const api_call = await fetch('http://localhost:3000/api/v1/albums');
+
+    const data = await api_call.json();
+
     this.setState({
-      results: "Here are all Beach House Albums:"
 
+        results: data
     });
+
   }
 
   render() {
