@@ -7,7 +7,8 @@
 ` git clone https://github.com/johncorderox/Beach-House-API.git `<br>
 Now that you have the repo you can run the install script for a basic install<br> 
 + Run in your terminal (Optional) <br>
-` bundle install && rails db:seed && rails db:migrate && rails s`
+
+` bundle install && rails db:seed && rails db:migrate && rails s ` <br>
 ## API Endpoints 
 <table>
   <tr>
