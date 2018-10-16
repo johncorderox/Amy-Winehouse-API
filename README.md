@@ -4,7 +4,7 @@
 ## Setup 
 * Clone or Download the repo to your desired path 
 <code>
-  git clone https://github.com/johncorderox/Beach-House-API.git </code>
+  git clone https://github.com/johncorderox/Beach-House-API.git </code><br>
 * (optional) <br>
 <code>
   bundle install && rake db:seed && rails db:migrate && echo "Rails 5 API Done....." && cd client/ && npm start && echo "React Client Done..." && cd ./ && rails s -b 0.0.0.0 && echo "BH API compiled... You can now make requests via localhost:3000 and localhost:3001"
