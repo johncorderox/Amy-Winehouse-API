@@ -3,7 +3,7 @@ class Api::V1::AlbumsController < ApplicationController
 
   # GET /albums
   def index
-    @albums = Album.all
+    @albums = Album.group(:name)
 
     render json: @albums
   end

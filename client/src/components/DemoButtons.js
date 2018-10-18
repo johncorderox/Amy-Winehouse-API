@@ -24,8 +24,10 @@ class DemoButtons extends Component {
 
     this.setState({
 
-        results: data
+      results: data
+
     });
+    console.log("called");
 
   }
 
@@ -39,7 +41,9 @@ class DemoButtons extends Component {
           <button type="button" class="btn btn-secondary">GET All Artists</button>
         </div>
         <div class="api-results" >
-        {this.state.results}
+        <ul>
+        {this.state.results.map(data=> <li>{data.name}</li>)}
+        </ul>
         </div>
       </div>
     );
