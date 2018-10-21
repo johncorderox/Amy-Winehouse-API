@@ -78,6 +78,11 @@ Now that you have the repo you can run the install script for a basic install<br
   </tr>
 </table>
 
+## Contributing
++ Fork it
++ Create your branch `git checkout -b cool_branch_name_here`
++ Commit and Push `git push origin cool_branch_name_here`
++ Create a new Pull Request 
 
 <br>
 <img src="https://preview.ibb.co/gjubi0/P1010437.jpg" alt="beach house"/>
