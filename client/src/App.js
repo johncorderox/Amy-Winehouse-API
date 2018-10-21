@@ -4,14 +4,14 @@ import './App.css';
 
 // Components
 import Navbar from './components/Navbar';
-import Info from './components/Info';
+import Container from './components/Container';
 
 class App extends Component {
+
   render() {
     return (
       <div>
       <Navbar />
-      <Info />
       </div>
     );
   }
