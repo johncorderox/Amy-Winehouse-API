@@ -5,7 +5,11 @@ Group.create(name: "Beach House")
 # Artists
 Artist.create(name: "Victoria Legrand", position: "Vocalist", active_member: true, group: Group.first)
 Artist.create(name: "Alex Scally", position: "Guitarist", active_member: true, group: Group.first)
+Artist.create(name: "James Barone", position: "Drummer", active_member: true, group: Group.first)
+Artist.create(name: "Skyler Skjelset", position: "Drummer", active_member: false, group: Group.first)
 Artist.create(name: "Daniel Franz", position: "Drummer", active_member: false, group: Group.first)
+Artist.create(name: "Chris Bear", position: "Drummer", active_member: false, group: Group.first)
+Artist.create(name: "Graham Hill", position: "Drummer", active_member: false, group: Group.first)
 
 # Albums
 Album.create(name: "Beach House", artist: Artist.first)
@@ -32,7 +36,7 @@ Song.create(name: "Apple Orchard", length: 4.31, album: Album.find_by(name: "Bea
 Song.create(name: "Master of None",length: 3.19, album: Album.find_by(name: "Beach House" ))
 Song.create(name: "Auburn and Ivory", length: 4.30, album: Album.find_by(name: "Beach House" ))
 Song.create(name: "Childhood", length: 3.36, album: Album.find_by(name: "Beach House" ))
-Song.create(name: "Lovlier Girl", length: 3.03, album: Album.find_by(name: "Beach House" ))
+Song.create(name: "Lovelier Girl", length: 3.03, album: Album.find_by(name: "Beach House" ))
 Song.create(name: "House on the Hill", length: 3.15, album: Album.find_by(name: "Beach House" ))
 Song.create(name: "Heart and Lungs", length: 7.50, album: Album.find_by(name: "Beach House"))
 
