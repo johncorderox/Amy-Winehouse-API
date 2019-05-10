@@ -1,5 +1,5 @@
 # Groups
-Group.create(name: "Beach House", press_photo: "http://i66.tinypic.com/k9xc8m.jpg", website: "http://beachhousebaltimore.com", label: "Sub Pop")
+Group.create(name: "Beach House", bio: "One of the finest dream pop groups of the 2000s and 2010s, Beach House is the duo of vocalist/keyboardist Victoria LeGrand and guitarist Alex Scally. Over the years, Beach House moved from the charmingly lo-fi sound of early Carpark releases like 2006's self-titled debut to the ethereal perfection of Sub Pop efforts such as 2012's Bloom, but they always focused on hypnotic melodies and LeGrand's velvety voice.", website: "http://beachhousebaltimore.com", press_photo: "http://i66.tinypic.com/k9xc8m.jpg")
 
 # Artists
 Artist.create(name: "Victoria Legrand", position: "Vocalist", active_member: true, group: Group.first)
