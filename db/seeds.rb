@@ -11,22 +11,14 @@ Artist.create(name: "Chris Bear", position: "Drummer", active_member: false, gro
 Artist.create(name: "Graham Hill", position: "Drummer", active_member: false, group: Group.first)
 
 # Albums
-Album.create(name: "Beach House", artist: Artist.first)
-Album.create(name: "Beach House", artist: Artist.second)
-Album.create(name: "Devotion", artist: Artist.first)
-Album.create(name: "Devotion", artist: Artist.second)
-Album.create(name: "Teen Dream", artist: Artist.first)
-Album.create(name: "Teen Dream", artist: Artist.second)
-Album.create(name: "Bloom", artist: Artist.first)
-Album.create(name: "Bloom", artist: Artist.second)
-Album.create(name: "Depression Cherry", artist: Artist.first)
-Album.create(name: "Depression Cherry", artist: Artist.second)
-Album.create(name: "Thank Your Lucky Stars", artist: Artist.first)
-Album.create(name: "Thank Your Lucky Stars", artist: Artist.second)
-Album.create(name: "B Sides and Rarities", artist: Artist.first)
-Album.create(name: "B Sides and Rarities", artist: Artist.second)
-Album.create(name: "7", artist: Artist.first)
-Album.create(name: "7", artist: Artist.second)
+Album.create(name: "Beach House", album_cover: "http://i65.tinypic.com/raywqo.jpg", release_date: "", group: Group.find(1)
+Album.create(name: "Devotion", album_cover: "http://i63.tinypic.com/bio2s9.jpg", release_date: "", group: Group.find(1)
+Album.create(name: "Teen Dream", album_cover: "http://i63.tinypic.com/2w3p0mb.jpg", release_date: "", group: Group.find(1)
+Album.create(name: "Bloom", album_cover: "http://i64.tinypic.com/w6xq3n.jpg", release_date: "", group: Group.find(1)
+Album.create(name: "Depression Cherry", album_cover: "http://i64.tinypic.com/2wbte9w.jpg", release_date: "", group: Group.find(1)
+Album.create(name: "Thank Your Lucky Stars", album_cover: "http://i68.tinypic.com/28m3eic.jpg", release_date: "", group: Group.find(1)
+Album.create(name: "B Sides and Rarities", album_cover: "http://i67.tinypic.com/2mmy6qa.jpg", release_date: "", group: Group.find(1)
+Album.create(name: "7", album_cover: "http://i68.tinypic.com/ta5wf4.jpg", release_date: "", group: Group.find(1)
 
 # Songs
 Song.create(name: "Saltwater", length: 2.55, album: Album.find_by(name: "Beach House" ))
@@ -119,3 +111,12 @@ Song.create(name: "Lose Your Smile", length: 4.09, album: Album.find_by(name: "7
 Song.create(name: "Woo", length: 4.14, album: Album.find_by(name: "7"))
 Song.create(name: "Girl of the Year", length: 3.51, album: Album.find_by(name: "7"))
 Song.create(name: "Last Ride", length: 6.59, album: Album.find_by(name: "7"))
+
+Song.create(name: "Alien", length: 4.03, album: Album.find_by(name: "7"))
+
+#Labels
+Label.create(name: "Carpark", location: "Washington, D.C.", group: ,Group.find(1))
+Label.create(name: "Bella Union", location: "Longon, England", group: ,Group.find(1))
+Label.create(name: "Sub Pop", location: "Seattle, Washington", group: ,Group.find(1))
+Label.create(name: "Misletone", location: "Australia", group: ,Group.find(1))
+Label.create(name: "Arts & Crafts Mexico", location: "Mexico", group: ,Group.find(1))
