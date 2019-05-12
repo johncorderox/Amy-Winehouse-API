@@ -115,8 +115,8 @@ Song.create(name: "Last Ride", length: 6.59, album: Album.find_by(name: "7"))
 Song.create(name: "Alien", length: 4.03, album: Album.find_by(name: "7"))
 
 #Labels
-Label.create(name: "Carpark", location: "Washington, D.C.", group: ,Group.find(1))
-Label.create(name: "Bella Union", location: "Longon, England", group: ,Group.find(1))
-Label.create(name: "Sub Pop", location: "Seattle, Washington", group: ,Group.find(1))
-Label.create(name: "Misletone", location: "Australia", group: ,Group.find(1))
-Label.create(name: "Arts & Crafts Mexico", location: "Mexico", group: ,Group.find(1))
+Label.create(name: "Carpark", location: "Washington, D.C.", group: Group.find(1))
+Label.create(name: "Bella Union", location: "Longon, England", group: Group.find(1))
+Label.create(name: "Sub Pop", location: "Seattle, Washington", group: Group.find(1))
+Label.create(name: "Misletone", location: "Australia", group: Group.find(1))
+Label.create(name: "Arts & Crafts Mexico", location: "Mexico", group: Group.find(1))
