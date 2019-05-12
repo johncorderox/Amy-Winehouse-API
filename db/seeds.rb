@@ -120,3 +120,6 @@ Label.create(name: "Bella Union", location: "Longon, England", group: Group.find
 Label.create(name: "Sub Pop", location: "Seattle, Washington", group: Group.find(1))
 Label.create(name: "Misletone", location: "Australia", group: Group.find(1))
 Label.create(name: "Arts & Crafts Mexico", location: "Mexico", group: Group.find(1))
+
+#Lyrics
+Lyric.create(lyric: "", song: Song.find_by(name: ""), album: Album.find_by(name: ""), group: Group.find(1))
