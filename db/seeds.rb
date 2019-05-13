@@ -123,3 +123,6 @@ Label.create(name: "Arts & Crafts Mexico", location: "Mexico", group: Group.find
 
 #Lyrics
 Lyric.create(lyric: "", song: Song.find_by(name: ""), album: Album.find_by(name: ""), group: Group.find(1))
+
+#Quotes
+Quote.create(name: "", source: "", artist: Artist.find_by(name: ""))
