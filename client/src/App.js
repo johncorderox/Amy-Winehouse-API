@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 
 import Information from './components/Information';
+import Form from './components/Form';
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
     </style>
     <div className="container">
       <Information />
+      <hr />
+      <Form />
     </div>
     </div>
   );

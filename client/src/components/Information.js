@@ -5,7 +5,12 @@ class Information extends Component {
     return (
       <div>
       <div className="row">
-      <div className="col-md-3 offset-md-3"><h1 className="cherry">API</h1></div>
+      <div className="col-md-10 offset-md-2">
+          <h1
+            className="cherry">API
+          </h1>
+          <h2>All the [placeholder] data you will ever need, accessible through a modern RESTful API.</h2>
+        </div>
     </div>
       </div>
     );
