@@ -125,4 +125,8 @@ Label.create(name: "Arts & Crafts Mexico", location: "Mexico", group: Group.find
 Lyric.create(lyric: "", song: Song.find_by(name: ""), album: Album.find_by(name: ""), group: Group.find(1))
 
 #Quotes
-Quote.create(name: "", source: "", artist: Artist.find_by(name: ""))
+Quote.create(name: "bagel beat", source: "twitter", artist: Artist.find_by(name: "Victoria Legrand"))
+Quote.create(name: "Burrito Martini", source: "twitter", artist: Artist.find_by(name: "Victoria Legrand"))
+Quote.create(name: "thanks sirfartpoop", source: "reddit", artist: Artist.find_by(name: "Victoria Legrand"))
+Quote.create(name: "GOLD SILVER SPACE HAIR WAVE EYELASH", source: "twitter", artist: Artist.find_by(name: "Victoria Legrand"))
+Quote.create(name: "Love is the message", source: "twitter", artist: Artist.find_by(name: "Victoria Legrand"))
