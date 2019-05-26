@@ -11,7 +11,7 @@ class Form extends Component {
       <div className="input-group-prepend">
         <span className="input-group-text" id="basic-addon3">https://beachhouse-api.com/api/v2/</span>
       </div>
-      <input type="text" className="form-control" id="basic-url" aria-describedby="basic-addon3" />
+      <input type="text" className="form-control" id="basic-url" aria-describedby="basic-addon3" autofocus="true"/>
       <button className="btn btn-primary">Submit</button>
       </div>
         </div>
