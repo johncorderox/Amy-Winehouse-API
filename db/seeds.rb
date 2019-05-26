@@ -11,14 +11,14 @@ Artist.create(name: "Chris Bear", position: "Drummer", active_member: false, gro
 Artist.create(name: "Graham Hill", position: "Drummer", active_member: false, group: Group.first)
 
 # Albums
-Album.create(name: "Beach House", album_cover: "http://i65.tinypic.com/raywqo.jpg", release_date: "", group: Group.find(1)
-Album.create(name: "Devotion", album_cover: "http://i63.tinypic.com/bio2s9.jpg", release_date: "", group: Group.find(1)
-Album.create(name: "Teen Dream", album_cover: "http://i63.tinypic.com/2w3p0mb.jpg", release_date: "", group: Group.find(1)
-Album.create(name: "Bloom", album_cover: "http://i64.tinypic.com/w6xq3n.jpg", release_date: "", group: Group.find(1)
-Album.create(name: "Depression Cherry", album_cover: "http://i64.tinypic.com/2wbte9w.jpg", release_date: "", group: Group.find(1)
-Album.create(name: "Thank Your Lucky Stars", album_cover: "http://i68.tinypic.com/28m3eic.jpg", release_date: "", group: Group.find(1)
-Album.create(name: "B Sides and Rarities", album_cover: "http://i67.tinypic.com/2mmy6qa.jpg", release_date: "", group: Group.find(1)
-Album.create(name: "7", album_cover: "http://i68.tinypic.com/ta5wf4.jpg", release_date: "", group: Group.find(1)
+Album.create(name: "Beach House", album_cover: "http://i65.tinypic.com/raywqo.jpg", release_date: "", group: Group.find(1))
+Album.create(name: "Devotion", album_cover: "http://i63.tinypic.com/bio2s9.jpg", release_date: "", group: Group.find(1))
+Album.create(name: "Teen Dream", album_cover: "http://i63.tinypic.com/2w3p0mb.jpg", release_date: "", group: Group.find(1))
+Album.create(name: "Bloom", album_cover: "http://i64.tinypic.com/w6xq3n.jpg", release_date: "", group: Group.find(1))
+Album.create(name: "Depression Cherry", album_cover: "http://i64.tinypic.com/2wbte9w.jpg", release_date: "", group: Group.find(1))
+Album.create(name: "Thank Your Lucky Stars", album_cover: "http://i68.tinypic.com/28m3eic.jpg", release_date: "", group: Group.find(1))
+Album.create(name: "B Sides and Rarities", album_cover: "http://i67.tinypic.com/2mmy6qa.jpg", release_date: "", group: Group.find(1))
+Album.create(name: "7", album_cover: "http://i68.tinypic.com/ta5wf4.jpg", release_date: "", group: Group.find(1))
 
 # Songs
 Song.create(name: "Saltwater", length: 2.55, album: Album.find_by(name: "Beach House" ))
@@ -121,8 +121,9 @@ Label.create(name: "Sub Pop", location: "Seattle, Washington", group: Group.find
 Label.create(name: "Misletone", location: "Australia", group: Group.find(1))
 Label.create(name: "Arts & Crafts Mexico", location: "Mexico", group: Group.find(1))
 
-#Lyrics
-Lyric.create(lyric: "", song: Song.find_by(name: ""), album: Album.find_by(name: ""), group: Group.find(1))
-
 #Quotes
-Quote.create(name: "", source: "", artist: Artist.find_by(name: ""))
+Quote.create(name: "bagel beat", source: "twitter", artist: Artist.find_by(name: "Victoria Legrand"))
+Quote.create(name: "Burrito Martini", source: "twitter", artist: Artist.find_by(name: "Victoria Legrand"))
+Quote.create(name: "thanks sirfartpoop", source: "reddit", artist: Artist.find_by(name: "Victoria Legrand"))
+Quote.create(name: "GOLD SILVER SPACE HAIR WAVE EYELASH", source: "twitter", artist: Artist.find_by(name: "Victoria Legrand"))
+Quote.create(name: "Love is the message", source: "twitter", artist: Artist.find_by(name: "Victoria Legrand"))

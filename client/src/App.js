@@ -3,6 +3,7 @@ import './App.css';
 
 import Information from './components/Information';
 import Form from './components/Form';
+import Output from './components/Output';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Information />
       <hr />
       <Form />
+      <Output />
     </div>
     </div>
   );
