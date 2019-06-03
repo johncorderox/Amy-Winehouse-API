@@ -6,7 +6,7 @@ class Output extends Component {
       <div>
       <div className="row">
       <div className="col-md-10 offset-md-2">
-      Output Box
+      <textarea className="form-control" id="json"></textarea>
     </div>
     </div>
     </div>
