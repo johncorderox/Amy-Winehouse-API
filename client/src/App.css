@@ -5,3 +5,8 @@ h1, h2 {
 .cherry {
   color: #790604;
 }
+
+pre {
+  height: 250px;
+  overflow-y: scroll;
+}
