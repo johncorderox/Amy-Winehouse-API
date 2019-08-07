@@ -15,7 +15,7 @@ class Form extends Component {
 }
 
 componentDidMount() {
-    axios.get('http://localhost:3001/api/v1/songs.json')
+    axios.get('http://localhost:3001/api/v1/albums.json')
     .then(response => {
         this.setState({
             lists: response.data

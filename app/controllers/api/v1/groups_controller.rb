@@ -3,7 +3,7 @@ class Api::V1::GroupsController < ApplicationController
 
   # GET /groups
   def index
-    @groups = Group.all
+    @groups = Group.includes(:artists)
 
     render json: @groups
   end
