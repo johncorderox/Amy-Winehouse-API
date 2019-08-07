@@ -14,7 +14,6 @@ function App() {
     <div className="container">
       <Information />
       <hr />
-      <Add />
       <Form />
     </div>
     </div>

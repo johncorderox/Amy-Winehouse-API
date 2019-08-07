@@ -28,7 +28,6 @@ class Add extends Component {
     //    }
     //
     // })
-    console.log( e.target.name.value);
 
   }
 
@@ -51,9 +50,6 @@ class Add extends Component {
       </div>
     );
   }
-
-
-
 }
 
 export default Add;
