@@ -12,4 +12,8 @@
 #
 class Artist < ApplicationRecord
   belongs_to :group
+  has_many :songs
+
+  validates :name, presence: true, uniqueness: true
+  validates :position, :active_member, presence: true
 end
