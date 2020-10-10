@@ -7,4 +7,7 @@ standardrb --fix
 brakeman
 curl http://localhost:3000/api/v1/artists | json_pp
 rake db:seed:dump
+bundle exec erd
+bundle exec rails g erd:install
+bundle exec rails db:migrate
 ```

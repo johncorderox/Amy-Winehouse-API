@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.1"
 
+gem 'activeadmin'
 gem "annotate"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "pg", ">= 0.18", "< 2.0"
@@ -20,6 +21,7 @@ end
 
 group :development do
   gem "brakeman"
+  gem 'rails-erd'
   gem "listen", "~> 3.2"
   gem "seed_dump"
   gem "spring"
