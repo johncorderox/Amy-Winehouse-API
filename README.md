@@ -1,4 +1,4 @@
-# Beach-House-API
+# Beach-House-API ![GitHub top language](https://img.shields.io/github/languages/top/johncorderox/Beach-House-API?style=flat-square)
 
 Note: This is still in prototyping Q1.
 
@@ -11,3 +11,8 @@ bundle exec erd
 bundle exec rails g erd:install
 bundle exec rails db:migrate
 ```
+- add documentation <br>
+- add erd diagram<br>
+- add throttle<br>
+- add api call count total <br>
+- add depfu denpendencies and badge <br>
