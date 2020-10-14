@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_09_053903) do
+ActiveRecord::Schema.define(version: 2020_10_14_193152) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,24 @@ ActiveRecord::Schema.define(version: 2020_10_09_053903) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "labels", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.bigint "group_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["group_id"], name: "index_labels_on_group_id"
+  end
+
+  create_table "quotes", force: :cascade do |t|
+    t.text "name"
+    t.string "source"
+    t.bigint "artist_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["artist_id"], name: "index_quotes_on_artist_id"
+  end
+
   create_table "songs", force: :cascade do |t|
     t.string "name"
     t.float "length"
@@ -51,8 +69,26 @@ ActiveRecord::Schema.define(version: 2020_10_09_053903) do
     t.index ["group_id"], name: "index_songs_on_group_id"
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "last_sign_in_at"
+    t.inet "current_sign_in_ip"
+    t.inet "last_sign_in_ip"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
   add_foreign_key "albums", "groups"
   add_foreign_key "artists", "groups"
+  add_foreign_key "labels", "groups"
+  add_foreign_key "quotes", "artists"
   add_foreign_key "songs", "albums"
   add_foreign_key "songs", "groups"
 end

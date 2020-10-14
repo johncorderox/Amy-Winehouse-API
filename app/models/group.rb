@@ -11,6 +11,7 @@ class Group < ApplicationRecord
   has_many :artists
   has_many :albums
   has_many :songs
+  has_many :labels
 
   validates :name, presence: true, uniqueness: true
 end

@@ -1,19 +1,16 @@
 # == Schema Information
 #
-# Table name: songs
+# Table name: labels
 #
 #  id         :bigint           not null, primary key
 #  name       :string
-#  length     :float
-#  album_id   :bigint           not null
+#  location   :string
 #  group_id   :bigint           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-class Song < ApplicationRecord
-  belongs_to :album
-  belongs_to :group
+require 'rails_helper'
 
-  validates :name, :length, presence: true
-  validates :name, uniqueness: true
+RSpec.describe Label, type: :model do
+  pending "add some examples to (or delete) #{__FILE__}"
 end
