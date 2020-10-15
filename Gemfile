@@ -7,6 +7,7 @@ gem "activeadmin"
 gem "active_model_serializers", "~> 0.10.0"
 gem "annotate"
 gem "bootsnap", ">= 1.4.2", require: false
+gem "devise"
 gem "kaminari"
 gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 4.1"

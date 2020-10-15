@@ -1,19 +1,17 @@
 # == Schema Information
 #
-# Table name: songs
+# Table name: labels
 #
 #  id         :bigint           not null, primary key
 #  name       :string
-#  length     :float
-#  album_id   :bigint           not null
+#  location   :string
 #  group_id   :bigint           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-class Song < ApplicationRecord
-  belongs_to :album
+class Label < ApplicationRecord
   belongs_to :group
 
-  validates :name, :length, presence: true
+  validates :name, :location, presence: true
   validates :name, uniqueness: true
 end

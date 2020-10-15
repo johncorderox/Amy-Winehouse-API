@@ -10,6 +10,7 @@ rake db:seed:dump
 bundle exec erd
 bundle exec rails g erd:install
 bundle exec rails db:migrate
+annotate --models --exclude fixtures
 ```
 - add documentation <br>
 - add erd diagram<br>
