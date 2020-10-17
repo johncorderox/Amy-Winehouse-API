@@ -3,7 +3,7 @@ class Api::V1::LabelsController < ActionController::API
 
   def index
     labels = Label.all
-    render json: {results: labels}.to_json, status: :ok
+    render json: labels, adapter: :json
   end
 
   def show
