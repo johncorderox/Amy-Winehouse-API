@@ -3,11 +3,11 @@ class Api::V1::AlbumsController < ActionController::API
 
   def index
     albums = Album.all
-    render json: {results: albums}.to_json, status: :ok
+    render json: albums, adapter: :json, status: :ok
   end
 
   def show
-    render json: @album, adapter: :json
+    render json: @album, adapter: :json, status: :ok
   end
 
   private
