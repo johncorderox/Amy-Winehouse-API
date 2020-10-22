@@ -104,14 +104,14 @@ Song.create!([
   {name: "Alien", length: 4.03, album_id: 8, group_id: 1}
 ])
 
-#Labels
+# Labels
 Label.create(name: "Carpark", location: "Washington, D.C.", group_id: 1)
 Label.create(name: "Bella Union", location: "Longon, England", group_id: 1)
 Label.create(name: "Sub Pop", location: "Seattle, Washington", group_id: 1)
 Label.create(name: "Misletone", location: "Australia", group_id: 1)
 Label.create(name: "Arts & Crafts Mexico", location: "Mexico", group_id: 1)
 
-#Quotes
+# Quotes
 Quote.create(name: "bagel beat", source: "twitter", artist: Artist.find_by(name: "Victoria Legrand"))
 Quote.create(name: "Burrito Martini", source: "twitter", artist: Artist.find_by(name: "Victoria Legrand"))
 Quote.create(name: "thanks sirfartpoop", source: "reddit", artist: Artist.find_by(name: "Victoria Legrand"))

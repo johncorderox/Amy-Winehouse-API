@@ -6,8 +6,9 @@ ruby "2.6.4"
 gem "active_model_serializers", "~> 0.10.0"
 gem "activeadmin"
 gem "annotate"
+gem "bcrypt"
 gem "bootsnap", ">= 1.4.2", require: false
-gem "devise"
+gem "jwt"
 gem "kaminari"
 gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 4.1"
@@ -33,6 +34,7 @@ group :development do
   gem "bullet"
   gem "listen", "~> 3.2"
   gem "rails-erd"
+  gem "rubocop", require: false
   gem "seed_dump"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
