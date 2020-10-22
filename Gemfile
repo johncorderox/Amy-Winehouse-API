@@ -3,8 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.6.4"
 
-gem "activeadmin"
 gem "active_model_serializers", "~> 0.10.0"
+gem "activeadmin"
 gem "annotate"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "devise"
@@ -31,8 +31,8 @@ end
 group :development do
   gem "brakeman"
   gem "bullet"
-  gem "rails-erd"
   gem "listen", "~> 3.2"
+  gem "rails-erd"
   gem "seed_dump"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
