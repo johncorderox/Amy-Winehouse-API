@@ -16,4 +16,3 @@ annotate --models --exclude fixtures
 - add erd diagram<br>
 - add throttle<br>
 - add api call count total <br>
-- add depfu denpendencies and badge <br>
