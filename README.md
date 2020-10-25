@@ -16,3 +16,31 @@ annotate --models --exclude fixtures
 - add erd diagram<br>
 - add throttle<br>
 - add api call count total <br>
+
+
+## Requesting Data from the API
+Unless requested, all information requested will be returned in the JSON format.
+
+```
+GET
+$ curl http://localhost:3000/api/v1/groups/1/albums/4/songs | json_pp
+```
+
+Sample Response 
+```
+
+```
+
+
+## API open endpoints 
+| HTTP method | URI path              | Description                           |
+|-------------|-----------------------|---------------------------------------|
+| GET         | /groups               | Retrieves Group information           |
+| GET, POST   | /artists              | Retrieves/Creates Artist information  |
+| GET, POST   | /albums               | Retrieves/Creates Album information   |
+| PUT         | /groups/albums/:id    | Updates Album information by Group ID |
+| GET, POST   | /songs                | Retrieves/Creates Song information    |
+| DELETE      | /albums/:id/songs/:id | Deletes Song from Album               |
+| GET, POST   | /quotes               | Retrieves/Creates Artist Quotes       |
+| GET, POST   | /labels               | Retrieves/Creates Group Labels        |
+| GET         | /albums/:id/labels    | Retrieves Album release Label         |
