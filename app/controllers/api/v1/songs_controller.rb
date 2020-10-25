@@ -3,11 +3,11 @@ class Api::V1::SongsController < ActionController::API
 
   def index
     songs = Song.all
-    render json: songs.to_json, status: :ok
+    render json: songs, adapter: :json, status: :ok
   end
 
   def show
-    render json: @song, adapter: :json
+    render json: @song, adapter: :json, status: :ok
   end
 
   private

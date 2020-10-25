@@ -3,11 +3,11 @@ class Api::V1::QuotesController < ActionController::API
 
   def index
     quotes = Quote.all
-    render json: quotes, status: :ok
+    render json: quotes, adapter: :json, status: :ok
   end
 
   def show
-    render json: @quote, adapter: :json
+    render json: @quote, adapter: :json, status: :ok
   end
 
   private

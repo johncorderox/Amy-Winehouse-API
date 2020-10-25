@@ -3,11 +3,11 @@ class Api::V1::ArtistsController < ActionController::API
 
   def index
     artists = Artist.all
-    render json: artists, status: :ok
+    render json: artists, adapter: :json, status: :ok
   end
 
   def show
-    render json: @artist, adapter: :json
+    render json: @artist, adapter: :json, status: :ok
   end
 
   private
