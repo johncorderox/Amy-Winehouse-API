@@ -9,7 +9,7 @@ class Api::V1::SongsController < ActionController::API
   end
 
   def show
-    render json: @song, adapter: :json
+    render json: @song, adapter: :json, status: :ok
   end
 
   private
