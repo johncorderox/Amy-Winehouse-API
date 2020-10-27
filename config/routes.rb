@@ -7,15 +7,13 @@ Rails.application.routes.draw do
           resources :songs, only: [:index, :show] do
           end
         end
+        resources :artists, only: [:index, :show] do
+          resources :labels, only: [:index, :show] do
+          end
+        end
       end
     end
-  resources :users, only: [:create]
-  post "/login", to: "auth#create"
+    resources :users, only: [:create]
+    post "/login", to: "auth#create"
   end
 end
-
-
-# resources :artists, only: [:index, :show] do
-#   resources :labels, only: [:index, :show] do
-#   end
-# end

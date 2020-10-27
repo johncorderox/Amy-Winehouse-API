@@ -1,8 +1,8 @@
 class Api::V1::ArtistsController < ActionController::API
-  before_action :set_group, only: [:show]
+  before_action :set_artist, only: [:show]
 
   def index
-    artists = Artist.all
+    artists = Artist.where(group_id: params[:group_id])
     render json: artists, adapter: :json, status: :ok
   end
 
