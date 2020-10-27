@@ -23,12 +23,22 @@ Unless requested, all information requested will be returned in the JSON format.
 
 ```
 GET
-$ curl http://localhost:3000/api/v1/groups/1/albums/4/songs | json_pp
+$ curl http://localhost:3000/api/v1/groups/4/albums/5/songs/1 | json_pp
 ```
-
-Sample Response 
-```
-
+### Sample Response
+  
+``` javascript
+{
+songs: [
+        {
+        id: 38,
+        name: "Levitation",
+        length: 5.54,
+        album_name: "Depression Cherry",
+        group_name: "Beach House"
+        } 
+       ]
+ }
 ```
 
 
