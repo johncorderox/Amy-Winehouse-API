@@ -9,4 +9,9 @@
 #
 class GroupSerializer < ActiveModel::Serializer
   attributes :id, :name
+
+  has_many :artists
+  has_many :albums
+  has_many :songs
+  has_many :labels
 end

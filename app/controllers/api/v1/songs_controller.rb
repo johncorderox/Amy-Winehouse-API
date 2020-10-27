@@ -2,7 +2,7 @@ class Api::V1::SongsController < ActionController::API
   before_action :find_song, only: [:show]
 
   def index
-    songs = Song.all
+    songs = Song.where(group_id: params[:group_id], album_id: params[:album_id])
     render json: songs, adapter: :json, status: :ok
   end
 
