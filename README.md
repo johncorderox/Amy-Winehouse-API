@@ -11,7 +11,7 @@ Before you begin, ensure you have met the following requirements:
 Installing the API locally is easy. You can clone the repo to your desired destination: 
 
 ```bash
- cd ~./Desktop && git clone https://github.com/johncorderox/Beach-House-API.git && cd bundle install && rails db:setup && rails s
+ cd ~/Desktop && git clone https://github.com/johncorderox/Beach-House-API.git && cd bundle install && rails db:setup && rails s
 ```
 
 
