@@ -1,5 +1,5 @@
 class Api::V1::QuotesController < ActionController::API
-  before_action :find_song, only: [:show]
+  before_action :set_quote, only: [:show]
 
   def index
     quotes = Quote.all
@@ -12,7 +12,7 @@ class Api::V1::QuotesController < ActionController::API
 
   private
 
-  def find_label
+  def set_quote
     @quote = Quote.find_by_id params[:id]
     render body: nil, status: :not_found unless @quote.present?
   end

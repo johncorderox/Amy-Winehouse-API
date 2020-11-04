@@ -14,13 +14,12 @@ Installing the API locally is easy. You can clone the repo to your desired desti
  cd ~/Desktop && git clone https://github.com/johncorderox/Beach-House-API.git && cd bundle install && rails db:setup && rails s
 ```
 
-
 ## Requesting Data from the API
 Unless requested, all information requested will be returned in the JSON format.
 
 ```
 GET
-$ curl http://localhost:3000/api/v1/groups/4/albums/5/songs/1 | json_pp
+$ curl http://localhost:3000/api/v1/groups/1/albums/5/songs/1 | json_pp
 ```
 ### Sample Response
 
