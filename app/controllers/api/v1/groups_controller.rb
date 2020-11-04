@@ -16,17 +16,3 @@ class Api::V1::GroupsController < ActionController::API
     @group = Group.find params[:id]
   end
 end
-
-# def set_blog
-#   @blog = Blog.find_by_id(params[:blog_id])
-#   render json: {
-#     error: 'not found'
-#   }, status: 404 if @blog.nil?
-# end
-#
-# def set_comment
-#   @comment = Comment.find_by_id(params[:id])
-#   render json: {
-#     error: 'not found'
-#   }, status: 404 if @comment.nil?
-# end
