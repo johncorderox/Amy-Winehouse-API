@@ -1,6 +1,18 @@
-# Beach-House-API ![GitHub top language](https://img.shields.io/github/languages/top/johncorderox/Beach-House-API?style=flat-square) ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/johncorderox/Beach-House-API/master?style=flat-square)
+# Beach-House-API ![GitHub top language](https://img.shields.io/github/languages/top/johncorderox/Beach-House-API?style=flat-square) ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/johncorderox/Beach-House-API/master?style=flat-square) ![GitHub](https://img.shields.io/github/license/johncorderox/Beach-House-API?style=flat-square)
 
-This project was a self-made tutorial for Rails API's and is centered around music for my favorite band and their information. The API can call record labels, songs, albums, active members for the band. Not only was this project made for learning purposes, but it poses a great skeleton for any music API for anyone out there.
+This project was a self-made tutorial for Rails API's and is centered around music for my favorite band and their information. The API can call record labels, songs, albums, and active members for the band. Not only was this project made for learning purposes, but it poses a great skeleton for any music API for anyone out there.
+
+## Prerequisites
+Before you begin, ensure you have met the following requirements:
+- Ruby 2.6.4
+- A mac OSX machine (Mojave 10.15.7+) OR Ubuntu (16.04+)
+
+## Installing 
+Installing the API locally is easy. You can clone the repo to your desired destination: 
+
+```bash
+ cd ~/Desktop && git clone https://github.com/johncorderox/Beach-House-API.git && cd bundle install && rails db:setup && rails s
+```
 
 ## Requesting Data from the API
 Unless requested, all information requested will be returned in the JSON format.
