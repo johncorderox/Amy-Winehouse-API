@@ -1,15 +1,6 @@
-# == Schema Information
-#
-# Table name: users
-#
-#  id              :bigint           not null, primary key
-#  username        :string
-#  password_digest :string
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
-#
 class User < ApplicationRecord
-  has_secure_password
-
-  validates :username, uniqueness: true
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
 end
