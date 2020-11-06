@@ -13,6 +13,6 @@ class LabelSerializer < ActiveModel::Serializer
   attributes :id, :name, :location, :group_name
 
   def group_name
-    self.object.group.name
+    object.group.name
   end
 end
