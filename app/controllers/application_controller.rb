@@ -6,6 +6,13 @@ class ApplicationController < ActionController::API
 
   private
 
+  def require_key
+    user = User.find_by api_key: params[:api_key] if params[:key]
+    if user.nil?
+      render json: {error: "You need a valid API key to use this service. Please register for an account.", status: :unauthorized }
+    end
+  end
+
   def render_invalid
     hash =
     {
