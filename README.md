@@ -24,17 +24,25 @@ $ curl http://localhost:3000/api/v1/groups/1/albums/5/songs/1 | json_pp
 ### Sample Response
 
 ``` javascript
+
+
+
 {
-songs: [
-        {
-        id: 38,
-        name: "Levitation",
+  "data": {
+    "id": "3",
+    "type": "songs",
+    "attributes": {
+        name: "Space Song",
         length: 5.54,
         album_name: "Depression Cherry",
         group_name: "Beach House"
-        }
-       ]
- }
+    },
+    "links": {
+      "self": "/songs/3"
+    }
+  }
+}
+
 ```
 
 
