@@ -3,7 +3,7 @@ class Api::V1::GroupsController < ActionController::API
 
   def index
     groups = Group.all
-    render json: groups, adapter: :json, status: :ok
+    render json: groups, adapter: :json, include: ['user'], status: :ok
   end
 
   def show
