@@ -1,24 +1,22 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+``` javascript
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+{
+  "data": {
+    "id": "3",
+    "type": "songs",
+    "attributes": {
+        name: "Space Song",
+        length: 5.54,
+        album_name: "Depression Cherry",
+        group_name: "Beach House"
+    },
+    "links": {
+      "self": "/songs/3"
+    }
+  }
+}
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
