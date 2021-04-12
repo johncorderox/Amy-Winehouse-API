@@ -74,4 +74,4 @@ NOTE: Be sure to tag @johncorderox so I can get notified for pull requests!
 
 **John Cordero** © [johncorderox](https://johncorderox.com), Released under the [MIT](./LICENSE) License.<br>
 
-> Blog [@jc](https://johncorderox.com) · GitHub [@johncorderox](https://github.com/metowolf) ·
+> Blog [@jc](https://johncorderox.com) · GitHub [@johncorderox](https://github.com/johncorderox) ·
