@@ -1,119 +1,106 @@
-Group.create!([
-  {name: "Beach House"}
+Artist.create(name: "Amy Winehouse",
+              date_of_birth: "September 14, 1983",
+              date_of_death: "July 23, 2011",
+              bio: "Much can be said about the late Amy Winehouse, one of the U.K.'s flagship vocalists during the 2000s. The British press and tabloids seemed to focus on her rowdy behavior, heavy consumption of alcohol, and tragic end, but fans and critics alike embraced her rugged charm, brash sense of humor, and distinctively soulful and jazzy vocals. Her platinum-selling breakthrough album, Frank (2003), elicited comparisons ranging from Billie Holiday and  Sarah Vaughan to Macy Gray and Lauryn Hill. Interestingly enough, despite her strong accent and vernacular, one can often hear aspects of each of those singers' vocal repertoires in Winehouse's own voice. Nonetheless, her allure had always been her songwriting -- almost always deeply personal but best known for its profanity and brutal candor.", cause_of_death: "Alcohol Poisoning", education: "Sylvia Young Theatre School", website: "https://www.amywinehouse.com/")
+              .press_photo.attach(io: File.open("app/assets/images/press.png"), filename: "press.png")
+Artist.first.signature.attach(io: File.open("app/assets/images/signature.png"), filename: "signature.png")
+
+Album.create(name: "Frank", release_date: "October 20, 2003", artist_id: 1).album_cover.attach(io: File.open("app/assets/images/frank.png"), filename: "frank.png")
+Album.create(name: "Frank: Deluxe Edition", release_date: "May 12, 2008", artist_id: 1).album_cover.attach(io: File.open("app/assets/images/frank_deluxe.png"), filename: "frank_deluxe.png")
+Album.create(name: "Back To Black", release_date: "October 27, 2006", artist_id: 1).album_cover.attach(io: File.open("app/assets/images/black.png"), filename: "black.png")
+Album.create(name: "Lioness: Hidden Treasures", release_date: "December 2, 2011", artist_id: 1).album_cover.attach(io: File.open("app/assets/images/lioness.png"), filename: "lioness.png")
+Album.create(name: "Amy (Original Motion Picture Soundtrack)", release_date: "October 30, 2015", artist_id: 1).album_cover.attach(io: File.open("app/assets/images/movie.png"), filename: "movie.png")
+Album.create(name: "Amy, Live at the BBC", release_date: "November 12, 2012", artist_id: 1).album_cover.attach(io: File.open("app/assets/images/bbc.png"), filename: "bbc.png")
+Album.create(name: "I Saw Mommy Kissing Santa Claus", release_date: "November 20, 2012", artist_id: 1).album_cover.attach(io: File.open("app/assets/images/mommy.png"), filename: "mommy.png")
+Album.create(name: "Best Friend (Acoustic)", release_date: "October 20, 2003", artist_id: 1).album_cover.attach(io: File.open("app/assets/images/friends.png"), filename: "friends.png")
+Album.create(name: "Rehab (Remixes & B Sides)", release_date: "November 7, 2006", artist_id: 1).album_cover.attach(io: File.open("app/assets/images/rehab.png"), filename: "rehab.png")
+
+
+RecordLabel.create!([
+  { name: "Universal Island Records Ltd.", album_id: 1 },
+  { name: "Universal Island Records Ltd.", album_id: 2 },
+  { name: "Universal Island Records Ltd.", album_id: 3 },
+  { name: "Universal Island Records, a division of Universal Music Operations Limited.", album_id: 4 },
+  { name: "Universal Island Records Ltd.", album_id: 5 },
+  { name: "Universal Island Records Ltd.", album_id: 6 },
+  { name: "Universal Island Records Ltd.", album_id: 7 },
+  { name: "Universal Island Records Ltd.", album_id: 8 }
+
 ])
-Album.create!([
-  {name: "Beach House", release_date: "October 3, 2006", group_id: 1},
-  {name: "Devotion", release_date: "Feburary 26, 2008", group_id: 1},
-  {name: "Teen Dream", release_date: "Janurary 26, 2010", group_id: 1},
-  {name: "Bloom", release_date: "May 15, 2012", group_id: 1},
-  {name: "Depression Cherry", release_date: "August 28, 2015", group_id: 1},
-  {name: "Thank Your Lucky Stars", release_date: "October 16, 2015", group_id: 1},
-  {name: "B Sides and Rarities", release_date: "June 30, 2017", group_id: 1},
-  {name: "7", release_date: "May 11, 2018", group_id: 1}
-])
-Artist.create!([
-  {name: "Victoria Legrand", position: "Vocalist", active_member: true, group_id: 1},
-  {name: "Alex Scally", position: "Guitarist", active_member: true, group_id: 1},
-  {name: "James Barone", position: "Drummer", active_member: true, group_id: 1},
-  {name: "Skyler Skjelset", position: "Bass", active_member: false, group_id: 1},
-  {name: "Daniel Franz", position: "Drummer", active_member: false, group_id: 1},
-  {name: "Chris Bear", position: "Drummer", active_member: false, group_id: 1},
-  {name: "Graham Hill", position: "Drummer", active_member: false, group_id: 1}
-])
+
 Song.create!([
-  {name: "Saltwater", length: 2.55, album_id: 1, group_id: 1},
-  {name: "Tokyo Witch", length: 3.42, album_id: 1, group_id: 1},
-  {name: "Apple Orchard", length: 4.31, album_id: 1, group_id: 1},
-  {name: "Master of None", length: 3.19, album_id: 1, group_id: 1},
-  {name: "Auburn and Ivory", length: 4.3, album_id: 1, group_id: 1},
-  {name: "Childhood", length: 3.35, album_id: 1, group_id: 1},
-  {name: "Lovelier Girl", length: 3.02, album_id: 1, group_id: 1},
-  {name: "House on the Hill", length: 3.14, album_id: 1, group_id: 1},
-  {name: "Heart and Lungs", length: 7.5, album_id: 1, group_id: 1},
-  {name: "Wedding Bell", length: 3.54, album_id: 2, group_id: 1},
-  {name: "You Came To Me", length: 4.05, album_id: 2, group_id: 1},
-  {name: "Gila", length: 4.46, album_id: 2, group_id: 1},
-  {name: "Turtle Island", length: 3.59, album_id: 2, group_id: 1},
-  {name: "Holy Dances", length: 4.19, album_id: 2, group_id: 1},
-  {name: "All The Years", length: 3.36, album_id: 2, group_id: 1},
-  {name: "Heart of Chambers", length: 4.25, album_id: 2, group_id: 1},
-  {name: "Some Things Last A Long Time", length: 2.31, album_id: 2, group_id: 1},
-  {name: "Zebra", length: 4.5, album_id: 3, group_id: 1},
-  {name: "Silver Soul", length: 4.58, album_id: 3, group_id: 1},
-  {name: "Norway", length: 3.54, album_id: 3, group_id: 1},
-  {name: "Walk in the Park", length: 5.24, album_id: 3, group_id: 1},
-  {name: "Used to Be", length: 4.0, album_id: 3, group_id: 1},
-  {name: "Lover of Mine", length: 5.06, album_id: 3, group_id: 1},
-  {name: "Better Times", length: 4.25, album_id: 3, group_id: 1},
-  {name: "10 Mile Stereo", length: 5.05, album_id: 3, group_id: 1},
-  {name: "Real Love", length: 5.22, album_id: 3, group_id: 1},
-  {name: "Take Care", length: 5.48, album_id: 3, group_id: 1},
-  {name: "Myth", length: 4.18, album_id: 4, group_id: 1},
-  {name: "Wild", length: 4.58, album_id: 4, group_id: 1},
-  {name: "Lazuli", length: 5.01, album_id: 4, group_id: 1},
-  {name: "Other People", length: 4.24, album_id: 4, group_id: 1},
-  {name: "The Hours", length: 4.11, album_id: 4, group_id: 1},
-  {name: "Troublemaker", length: 4.55, album_id: 4, group_id: 1},
-  {name: "New Year", length: 5.25, album_id: 4, group_id: 1},
-  {name: "Wishes", length: 4.47, album_id: 4, group_id: 1},
-  {name: "On the Sea", length: 5.32, album_id: 4, group_id: 1},
-  {name: "Irene", length: 16.57, album_id: 4, group_id: 1},
-  {name: "Levitation", length: 5.54, album_id: 5, group_id: 1},
-  {name: "Sparks", length: 5.21, album_id: 5, group_id: 1},
-  {name: "Space Song", length: 5.2, album_id: 5, group_id: 1},
-  {name: "Beyond Love", length: 4.25, album_id: 5, group_id: 1},
-  {name: "10:37", length: 3.48, album_id: 5, group_id: 1},
-  {name: "PPP", length: 6.08, album_id: 5, group_id: 1},
-  {name: "Wildflower", length: 3.39, album_id: 5, group_id: 1},
-  {name: "Bluebird", length: 3.55, album_id: 5, group_id: 1},
-  {name: "Days of Candy", length: 6.15, album_id: 5, group_id: 1},
-  {name: "Majorette", length: 4.0, album_id: 6, group_id: 1},
-  {name: "She's So Lovely", length: 4.22, album_id: 6, group_id: 1},
-  {name: "All Your Yeahs", length: 3.48, album_id: 6, group_id: 1},
-  {name: "One Thing", length: 5.35, album_id: 6, group_id: 1},
-  {name: "Common Girl", length: 3.07, album_id: 6, group_id: 1},
-  {name: "The Traveller", length: 4.03, album_id: 6, group_id: 1},
-  {name: "Elegy to the Void", length: 6.29, album_id: 6, group_id: 1},
-  {name: "Rough Song", length: 5.14, album_id: 6, group_id: 1},
-  {name: "Somewhere Tonight", length: 4.13, album_id: 6, group_id: 1},
-  {name: "Chariot", length: 5.16, album_id: 7, group_id: 1},
-  {name: "Baby", length: 3.02, album_id: 7, group_id: 1},
-  {name: "Equal Mind", length: 3.42, album_id: 7, group_id: 1},
-  {name: "Used to Be (2008 Single Version)", length: 4.05, album_id: 7, group_id: 1},
-  {name: "White Moon (iTunes Session Remix)", length: 4.07, album_id: 7, group_id: 1},
-  {name: "Baseball Diamond", length: 4.36, album_id: 7, group_id: 1},
-  {name: "Norway (iTunes Session Remix)", length: 3.16, album_id: 7, group_id: 1},
-  {name: "Play the Game", length: 4.18, album_id: 7, group_id: 1},
-  {name: "The Arrangement", length: 5.04, album_id: 7, group_id: 1},
-  {name: "Saturn Song", length: 4.3, album_id: 7, group_id: 1},
-  {name: "Rain in Numbers", length: 2.26, album_id: 7, group_id: 1},
-  {name: "I Do Not Care for the Winter Sun", length: 3.11, album_id: 7, group_id: 1},
-  {name: "10 Mile Stereo (Cough Syrup Remix)", length: 5.3, album_id: 7, group_id: 1},
-  {name: "Wherever You Go", length: 3.26, album_id: 7, group_id: 1},
-  {name: "Dark Spring", length: 3.24, album_id: 8, group_id: 1},
-  {name: "Pay No Mind", length: 3.24, album_id: 8, group_id: 1},
-  {name: "Lemon Glow", length: 4.04, album_id: 8, group_id: 1},
-  {name: "L'Inconnue", length: 4.24, album_id: 8, group_id: 1},
-  {name: "Drunk in LA", length: 3.59, album_id: 8, group_id: 1},
-  {name: "Dive", length: 4.25, album_id: 8, group_id: 1},
-  {name: "Black Car", length: 4.11, album_id: 8, group_id: 1},
-  {name: "Lose Your Smile", length: 4.09, album_id: 8, group_id: 1},
-  {name: "Woo", length: 4.14, album_id: 8, group_id: 1},
-  {name: "Girl of the Year", length: 3.51, album_id: 8, group_id: 1},
-  {name: "Last Ride", length: 6.59, album_id: 8, group_id: 1},
-  {name: "Alien", length: 4.03, album_id: 8, group_id: 1}
+  { name: "Intro", length: 0.22, album_id: 1, artist_id: 1 },
+  { name: "Stronger Than Me", length: 3.31, album_id: 1, artist_id: 1 },
+  { name: "You Sent Me Flying", length: 5.18, album_id: 1, artist_id: 1 },
+  { name: "Cherry", length: 1.32, album_id: 1, artist_id: 1 },
+  { name: "Know You Now", length: 3.03, album_id: 1, artist_id: 1 },
+  { name: "Fuck Me Pumps", length: 3.20, album_id: 1, artist_id: 1 },
+  { name: "I Heard Love Is Blind", length: 2.10, album_id: 1, artist_id: 1 },
+  { name: "Moody's Mood For Love", length: 2.49, album_id: 1, artist_id: 1 },
+  { name: "Teo Licks", length: 0.39, album_id: 1, artist_id: 1 },
+  { name: "(There Is) No Greater Love", length: 2.08, album_id: 1, artist_id: 1 },
+  { name: "In My Bed", length: 5.17, album_id: 1, artist_id: 1 },
+  { name: "Take The Box", length: 3.20, album_id: 1, artist_id: 1 },
+  { name: "October Song", length: 3.25, album_id: 1, artist_id: 1 },
+  { name: "What Is It About Men", length: 3.29, album_id: 1, artist_id: 1 },
+  { name: "Amy Amy Amy", length: 4.14, album_id: 1, artist_id: 1 },
+  { name: "Outro", length: 0.44, album_id: 1, artist_id: 1 },
+  { name: "Brother", length: 4.13, album_id: 1, artist_id: 1 },
+  { name: "Mr Magic (Through The Smoke)", length: 3.55, album_id: 1, artist_id: 1 },
+
+  { name: "Take the Box (original demo)", length: 3.26, album_id: 2, artist_id: 1 },
+  { name: "You Sent Me Flying (original demo) (UK edition only)", length: 5.40, album_id: 2, artist_id: 1 },
+  { name: "I Heard Love Is Blind (original demo)", length: 2.13, album_id: 2, artist_id: 1 },
+  { name: "Someone to Watch Over Me (original demo)", length: 4.29, album_id: 2, artist_id: 1 },
+  { name: "What It Is (original demo)", length: 3.22, album_id: 2, artist_id: 1 },
+  { name: "Round Midnight (B-side)", length: 3.49, album_id: 2, artist_id: 1 },
+  { name: "Fool's Gold (B-side)", length: 3.40, album_id: 2, artist_id: 1 },
+  { name: "Stronger Than Me (Later... with Jools Holland)", length: 3.53, album_id: 2, artist_id: 1 },
+  { name: "I Heard Love Is Blind (live at The Concorde, Brighton)", length: 2.29, album_id: 2, artist_id: 1 },
+  { name: "Take the Box (live at The Concorde, Brighton)", length: 3.33, album_id: 2, artist_id: 1 },
+  { name: "In My Bed (live at The Concorde, Brighton)", length: 5.37, album_id: 2, artist_id: 1 },
+  { name: "Mr Magic (Through the Smoke) (Janice Long Session)", length: 4.05, album_id: 2, artist_id: 1 },
+  { name: "(There Is) No Greater Love (Janice Long Session)", length: 2.38, album_id: 2, artist_id: 1 },
+  { name: "Fuck Me Pumps (MJ Cole Mix)", length: 5.54, album_id: 2, artist_id: 1 },
+  { name: "Take the Box (Seiji's Buggin' Mix)", length: 7.48, album_id: 2, artist_id: 1 },
+  { name: "Stronger Than Me (Harmonic 33 Mix)", length: 3.43, album_id: 2, artist_id: 1 },
+  { name: "In My Bed (CJ Mix)", length: 4.36, album_id: 2, artist_id: 1 },
+
+  { name: "Rehab", length: 3.34, album_id: 3, artist_id: 1 },
+  { name: "You Know I'm No Good", length: 4.17, album_id: 3, artist_id: 1 },
+  { name: "Me & Mr Jones", length: 2.33, album_id: 3, artist_id: 1 },
+  { name: "Just Friends", length: 3.13, album_id: 3, artist_id: 1 },
+  { name: "Back To Black", length: 4.01, album_id: 3, artist_id: 1 },
+  { name: "Love Is A Losing Game", length: 2.35, album_id: 3, artist_id: 1 },
+  { name: "Tears Dry On Their Own", length: 3.06, album_id: 3, artist_id: 1 },
+  { name: "Wake Up Alone", length: 3.42, album_id: 3, artist_id: 1 },
+  { name: "Some Unholy War", length: 2.22, album_id: 3, artist_id: 1 },
+  { name: "He Can Only Hold Her", length: 2.46, album_id: 3, artist_id: 1 },
+  { name: "Addicted", length: 2.45, album_id: 3, artist_id: 1 },
+
+  { name: "Our Day Will Come", length: 2.49, album_id: 4, artist_id: 1 },
+  { name: "Between The Cheats", length: 3.33, album_id: 4, artist_id: 1 },
+  { name: "Tears Dry - Original Version", length: 4.08, album_id: 4, artist_id: 1 },
+  { name: "Will You Still Love Me Tomorrow? - 2011", length: 4.22, album_id: 4, artist_id: 1 },
+  { name: "Like Smoke", length: 4.38, album_id: 4, artist_id: 1 },
+  { name: "Valerie - '68 Version", length: 3.59, album_id: 4, artist_id: 1 },
+  { name: "The Girl From Ipanema", length: 2.46, album_id: 4, artist_id: 1 },
+  { name: "Half Time", length: 3.50, album_id: 4, artist_id: 1 },
+  { name: "Wake Up Alone - Original Recording", length: 4.24, album_id: 4, artist_id: 1 },
+  { name: "Best Friends, Right?", length: 2.56, album_id: 4, artist_id: 1 },
+  { name: "Body And Soul", length: 3.18, album_id: 4, artist_id: 1 },
+  { name: "A Song For You", length: 4.29, album_id: 4, artist_id: 1 }
 ])
 
-# Labels
-Label.create(name: "Carpark", location: "Washington, D.C.", group_id: 1)
-Label.create(name: "Bella Union", location: "Longon, England", group_id: 1)
-Label.create(name: "Sub Pop", location: "Seattle, Washington", group_id: 1)
-Label.create(name: "Misletone", location: "Australia", group_id: 1)
-Label.create(name: "Arts & Crafts Mexico", location: "Mexico", group_id: 1)
-
-# Quotes
-Quote.create(name: "bagel beat", source: "twitter", artist: Artist.find_by(name: "Victoria Legrand"))
-Quote.create(name: "Burrito Martini", source: "twitter", artist: Artist.find_by(name: "Victoria Legrand"))
-Quote.create(name: "thanks sirfartpoop", source: "reddit", artist: Artist.find_by(name: "Victoria Legrand"))
-Quote.create(name: "GOLD SILVER SPACE HAIR WAVE EYELASH", source: "twitter", artist: Artist.find_by(name: "Victoria Legrand"))
-Quote.create(name: "Love is the message", source: "twitter", artist: Artist.find_by(name: "Victoria Legrand"))
+Quote.create!([
+  { quote: "I don't think your ability to fight has anything to do with how big you are. It's to do with how much anger is in you.", artist_id: 1 },
+  { quote: "Life's short. Anything could happen, and it usually does, so there is no point in sitting around thinking about all the ifs, ands and buts.", artist_id: 1 },
+  { quote: "I always wrote poetry and stuff like that, so putting songs together wasn't that spectacular.", artist_id: 1 },
+  { quote: "The jazz I love is sweet and pure with raw elements, which is exactly what the good hip-hop is doing now.", artist_id: 1 },
+  { quote: "I'm romantic. I fall in love every day. Not with people but with situations. The other day, I saw a tramp polishing his shoes. That just gripped my heart.", artist_id: 1 },
+  { quote: "Here in England, everyone's a pop star, innit, whereas in America they believe in the term artist.", artist_id: 1 },
+  { quote: "If I died tomorrow, I'd be a happy girl.", artist_id: 1 },
+  { quote: "Girls talk to each other like men talk to each other. But girls have an eye for detail.", artist_id: 1 },
+  { quote: "I didn't think it was special to be able to sing.", artist_id: 1 },
+  { quote: "I'm not a natural born performer.", artist_id: 1 }
+])

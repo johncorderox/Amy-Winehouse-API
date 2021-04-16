@@ -1,20 +1,15 @@
-# == Schema Information
-#
-# Table name: albums
-#
-#  id           :bigint           not null, primary key
-#  name         :string
-#  release_date :string
-#  group_id     :bigint           not null
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
-#
 class AlbumSerializer < ActiveModel::Serializer
-  attributes :id, :name, :release_date, :group_name
+  include Rails.application.routes.url_helpers
 
-  has_many :songs
+  attributes :id, :name, :release_date, :album_cover, :artist_name
 
-  def group_name
-    object.group.name
+  has_one :record_label
+
+  def album_cover
+    rails_blob_path(object.album_cover, only_path: true) if object.album_cover.attached?
+  end
+
+  def artist_name
+    object.artist.name
   end
 end

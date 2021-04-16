@@ -1,17 +1,7 @@
-# == Schema Information
-#
-# Table name: albums
-#
-#  id           :bigint           not null, primary key
-#  name         :string
-#  release_date :string
-#  group_id     :bigint           not null
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
-#
 class Album < ApplicationRecord
-  belongs_to :group
+  belongs_to :artist
   has_many :songs
+  has_one :record_label
 
-  validates :name, :release_date, presence: true
+  has_one_attached :album_cover
 end

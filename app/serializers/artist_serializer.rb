@@ -1,19 +1,17 @@
-# == Schema Information
-#
-# Table name: artists
-#
-#  id            :bigint           not null, primary key
-#  name          :string
-#  position      :string
-#  active_member :boolean
-#  group_id      :bigint           not null
-#  created_at    :datetime         not null
-#  updated_at    :datetime         not null
-#
 class ArtistSerializer < ActiveModel::Serializer
-  attributes :id, :name, :position, :active_member, :group_name
+  include Rails.application.routes.url_helpers
 
-  def group_name
-    object.group.name
+  attributes :id, :name, :date_of_birth, :date_of_death, :bio, :cause_of_death, :education, :website, :press_photo, :signature
+
+  has_many :quotes
+  has_many :albums
+  has_many :songs, through: :albums
+
+  def press_photo
+    rails_blob_path(object.press_photo, only_path: true) if object.press_photo.attached?
+  end
+
+  def signature
+    rails_blob_path(object.signature, only_path: true) if object.signature.attached?
   end
 end

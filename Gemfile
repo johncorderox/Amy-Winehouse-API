@@ -1,40 +1,27 @@
-source "https://rubygems.org"
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+source 'https://rubygems.org'
+git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
 
-ruby "2.6.4"
+ruby '2.6.3'
 
-gem "active_model_serializers", "~> 0.10.0"
-gem "activeadmin"
-gem "annotate"
-gem "bootsnap", ">= 1.4.2", require: false
-gem "devise"
-gem "kaminari"
-gem "pg", ">= 0.18", "< 2.0"
-gem "puma", "~> 4.1"
-gem "rack-cors"
-gem "rails", "~> 6.0.3", ">= 6.0.3.3"
+gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
+gem 'pg', '~> 1.1'
+gem 'puma', '~> 5.0'
+gem 'sass-rails', '>= 6'
+gem 'webpacker', '~> 5.0'
+gem 'turbolinks', '~> 5'
+gem 'jbuilder', '~> 2.7'
+gem 'active_model_serializers', '~> 0.10.0'
+gem 'bootsnap', '>= 1.4.4', require: false
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'devise'
 
 group :development, :test do
-  gem "awesome_print"
-  gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
-  gem "capybara"
-  gem "database_cleaner"
-  gem "factory_bot_rails"
-  gem "faker"
-  gem "hirb"
-  gem "rails-controller-testing"
-  gem "rspec-rails", "~> 4.0.1"
-  gem "rubocop"
-  gem "rubocop-rails", "~> 2.8.1"
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
-  gem "brakeman"
-  gem "bullet"
-  gem "listen", "~> 3.2"
-  gem "rails-erd"
-  gem "seed_dump"
-  gem "spring"
-  gem "spring-watcher-listen", "~> 2.0.0"
-  gem "standard"
+  gem 'web-console', '>= 4.1.0'
+  gem 'rack-mini-profiler', '~> 2.0'
+  gem 'listen', '~> 3.3'
+  gem 'spring'
 end

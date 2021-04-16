@@ -1,0 +1,55 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ .amy-container {
+   width: 1400px;
+    margin:0 auto;
+ }
+
+ #json-pretty {
+   max-width: 1400px;
+   max-height: 550px;
+   overflow-y: scroll;
+ }
+
+ .api-call {
+   margin: 0 auto;
+ }
+
+ .demo-container {
+   margin-top: 50px;
+ }
+
+ .api-information {
+   margin-top: 50px;
+   margin-bottom: 50px;
+ }
+.card {
+  width: 18rem;
+  margin: 30px;
+}
+.authform {
+  margin: 0 auto;
+  max-width: 320px;
+  padding-top: 30px;
+
+  form {
+    padding-bottom: 40px;
+  }
+  .right {
+    float: right;
+  }
+}
