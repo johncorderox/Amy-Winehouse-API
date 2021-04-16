@@ -1,4 +1,4 @@
-# Amy Winehouse API ![GitHub top language](https://img.shields.io/github/languages/top/johncorderox/Beach-House-API?style=flat-square) ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/johncorderox/Beach-House-API/master?style=flat-square) ![GitHub](https://img.shields.io/github/license/johncorderox/Beach-House-API?style=flat-square)
+# Amy Winehouse API ![GitHub top language](https://img.shields.io/github/languages/top/johncorderox/Beach-House-API?style=flat-square)![GitHub](https://img.shields.io/github/license/johncorderox/Beach-House-API?style=flat-square)
 
 This project was a self-made API since I truly love the music of Amy. The API can call record labels, songs, albums, and active members for the band. Not only was the project pushed myself to learn more about RESTful development, it also makes other programmers who lover her music the ability to collaborate. 
 
