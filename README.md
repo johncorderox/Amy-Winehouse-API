@@ -21,7 +21,7 @@ Installing the API locally is easy. You can clone the repo to your desired desti
 ## Requesting Data from the API
 Unless requested, all information requested will be returned in the JSON format.
 
-```
+```bash
 GET
 $ curl -H "X-Api-Key: YOUR_API_KEY_HERE" http://localhost:3000/api/v1/artists/1 | json_pp
 ```
