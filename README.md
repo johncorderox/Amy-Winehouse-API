@@ -19,7 +19,7 @@ Unless requested, all information requested will be returned in the JSON format.
 
 ```
 GET
-$ curl http://localhost:3000/api/v1/artists/1 | json_pp
+$ curl -H "X-Api-Key: YOUR_API_KEY_HERE" http://localhost:3000/api/v1/artists/1 | json_pp
 ```
 ### Sample Response
 
