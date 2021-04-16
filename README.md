@@ -1,7 +1,6 @@
 # Amy Winehouse API ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/johncorderox/Amy-Winehouse-API?style=flat-square) ![GitHub closed issues](https://img.shields.io/github/issues-closed/johncorderox/Amy-Winehouse-API?style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/johncorderox/Amy-Winehouse-API?style=flat-square) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/johncorderox/Amy-Winehouse-API?style=flat-square)
-<br>
 <p align="center">
-  <img src="/readme.png" width="350" title="hover text">
+  <img src="/readme.png" width="250" title="hover text">
 </p>
 
 
