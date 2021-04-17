@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get "/" => "root#index"
-      resources :artists, only: [:index, :create, :show] do
+      resources :artists, only: [:index, :show] do
         resources :quotes, only: [:index, :show]
         resources :albums do
         resources :record_labels, only: [:index]

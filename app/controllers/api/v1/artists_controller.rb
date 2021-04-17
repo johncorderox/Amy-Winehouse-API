@@ -2,7 +2,6 @@ module Api
   module V1
     class ArtistsController < ApplicationController
       include Errors
-    #  include ApiTokenValidator
 
       def index
         render json: artists, status: :ok

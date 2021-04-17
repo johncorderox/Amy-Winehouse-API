@@ -4,19 +4,21 @@ module Api
       include Errors
 
       def index
-        songs = Song.where(artist_id: params[:artist_id], album_id: params[:album_id])
-        render json: songs, status: :ok
+        render json: @songs, status: :ok
       end
 
       def show
-        render json: song, status: :ok
+        render json: @song, status: :ok
       end
 
       private
 
       def song
-        @song ||= Song.where(params[:id])
+        @song ||= Song.where(id: params[:id], artists_id: params[:artist_id], album_id: params[:album_id])
       end
+
+      def songs
+        @songs ||= Song.where(artists_id: params[:artist_id], album_id: params[:album_id])
     end
   end
 end
