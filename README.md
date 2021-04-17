@@ -1,7 +1,6 @@
 # Amy Winehouse API ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/johncorderox/Amy-Winehouse-API?style=flat-square) ![GitHub closed issues](https://img.shields.io/github/issues-closed/johncorderox/Amy-Winehouse-API?style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/johncorderox/Amy-Winehouse-API?style=flat-square) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/johncorderox/Amy-Winehouse-API?style=flat-square)
-<br>
 <p align="center">
-  <img src="https://diy-magazine.s3.amazonaws.com/d/diy/Artists/A/Amy_Winehouse/_landscape/amy-winehouse-press.jpg" width="350" title="hover text">
+  <img src="/readme.png" width="250" title="hover text">
 </p>
 
 
@@ -22,7 +21,7 @@ Installing the API locally is easy. You can clone the repo to your desired desti
 ## Requesting Data from the API
 Unless requested, all information requested will be returned in the JSON format.
 
-```
+```bash
 GET
 $ curl -H "X-Api-Key: YOUR_API_KEY_HERE" http://localhost:3000/api/v1/artists/1 | json_pp
 ```
