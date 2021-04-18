@@ -4,6 +4,14 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def after_sign_up_path_for(resource)
+   edit_user_password_path
+  end
+
+  def after_sign_in_path_for(resource)
+   edit_user_password_path
+  end
+
   def render_not_found
     hash = {
       "status" => 404,
