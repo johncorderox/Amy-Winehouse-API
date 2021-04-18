@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: artists
+#
+#  id             :bigint           not null, primary key
+#  name           :string
+#  date_of_birth  :string
+#  date_of_death  :string
+#  bio            :text
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  cause_of_death :string
+#  education      :string
+#  website        :string
+#
 class Artist < ApplicationRecord
   has_many :albums
   has_many :quotes

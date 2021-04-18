@@ -47,7 +47,7 @@ export class ApiInput extends React.Component {
           <p>
             Open API endpoints:
             <button type="button" className="btn btn-link">
-              /artist
+              /artists
             </button>
             <button type="button" className="btn btn-link">
               /albums/2

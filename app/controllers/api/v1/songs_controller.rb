@@ -19,6 +19,7 @@ module Api
 
       def songs
         @songs ||= Song.where(artists_id: params[:artist_id], album_id: params[:album_id])
+      end
     end
   end
 end
