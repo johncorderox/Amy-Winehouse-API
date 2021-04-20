@@ -19,6 +19,9 @@
     margin:0 auto;
  }
 
+ .card img {
+   max-height: 260px;
+ }
  #json-pretty {
    max-width: 1400px;
    max-height: 550px;
@@ -29,12 +32,16 @@
    margin: 0 auto;
  }
 
+ .api-call form {
+   margin: 0 auto;
+   display: inline;
+ }
+
  .demo-container {
    margin-top: 50px;
  }
 
  .api-information {
-   margin-top: 50px;
    margin-bottom: 50px;
  }
 .card {
@@ -52,4 +59,13 @@
   .right {
     float: right;
   }
+}
+
+footer {
+  margin-top: 100px;
+}
+
+footer .footer-text {
+
+  background-color: rgba(0, 0, 0, 0.2)
 }

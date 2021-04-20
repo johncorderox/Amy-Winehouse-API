@@ -4,48 +4,49 @@ export class Footer extends React.Component {
   render() {
     return (
       <div>
-        <footer class="bg-light text-center text-lg-start">
-          <div class="container p-4">
-            <div class="row">
-              <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Amy Winehouse API</h5>
+        <footer className="bg-light text-center text-lg-start">
+          <div className="container p-4">
+            <div className="row">
+              <div className="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 className="text-uppercase">Amy Winehouse API</h5>
 
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
-                  atque ea quis molestias. Fugiat pariatur maxime quis culpa
-                  corporis vitae repudiandae aliquam voluptatem veniam, est
-                  atque cumque eum delectus sint!
+                This API is open source! <a href="https://github.com/johncorderox/Amy-Winehouse-API">Github &hearts;</a>
                 </p>
               </div>
 
-              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Links</h5>
+              <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 className="text-uppercase">Links</h5>
 
-                <ul class="list-unstyled mb-0">
+                <ul className="list-unstyled mb-0">
                   <li>
-                    <a href="#!" class="text-dark">
-                      Link 1
+                    <a href="#!" className="text-dark">
+                      About
                     </a>
                   </li>
                   <li>
-                    <a href="#!" class="text-dark">
-                      Link 2
+                    <a href="#!" className="text-dark">
+                      Biography
                     </a>
                   </li>
                   <li>
-                    <a href="#!" class="text-dark">
-                      Link 3
+                    <a href="#!" className="text-dark">
+                      Sign Up
                     </a>
                   </li>
                   <li>
-                    <a href="#!" class="text-dark">
-                      Link 4
+                    <a href="#!" className="text-dark">
+                      Sign In
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
+          <div className="text-center p-3 footer-text">
+          © 2021 Copyright: John Cordero
+        </div>
+
 
         </footer>
       </div>

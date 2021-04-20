@@ -6,9 +6,20 @@ export class ApiInput extends React.Component {
     super(props);
     this.state = {
       demoCall: [],
-
+      apiInput: "",
     };
   }
+
+  apiCall = (url) => {
+    fetch("/api/v1/" + url)
+      .then((resp) => resp.json())
+      .then((b) => {
+        this.setState({
+          demoCall: b,
+        });
+      })
+      .catch((error) => console.log(error));
+  };
 
   componentDidMount() {
     fetch("/api/v1/artists/1/")
@@ -21,12 +32,52 @@ export class ApiInput extends React.Component {
       .catch((error) => console.log(error));
   }
 
+  changeInput = (option) => {
+    var endpoint;
+
+    switch (option) {
+      case 0:
+        endpoint = "artists/1/albums";
+        break;
+      case 1:
+        endpoint = "artists/1/albums/3/songs";
+        break;
+      case 2:
+        endpoint = "artists/1/quotes";
+        break;
+      default:
+        "artists/1";
+    }
+    this.apiCall(endpoint);
+    this.appendInput(endpoint);
+  };
+
+  appendInput = (endpoint) => {
+    this.setState({
+      apiInput: endpoint
+    })
+
+  };
+
+  handleChange = (event) => {
+    this.setState({
+      apiInput: event.target.value
+    })
+  };
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.apiCall(this.state.apiInput);
+  }
+
   render() {
     const API_URL = "https://amy-winehouse-api.com/api/v1/";
     return (
       <div>
         <div className="col-md-7 api-call">
           <div className="input-group mb-3">
+            <form onSubmit={this.handleSubmit} className="form-inline">
+              <div className="form-group">
             <div className="input-group-prepend">
               <span className="input-group-text" id="basic-addon3">
                 {API_URL}
@@ -37,26 +88,39 @@ export class ApiInput extends React.Component {
               className="form-control"
               id="basic-url"
               aria-describedby="basic-addon3"
+              value={this.state.apiInput}
+              onChange={this.handleChange}
             />
             <div className="input-group-append">
-              <button className="btn btn-info" type="button">
+              <button className="btn btn-info" type="submit">
                 Submit
               </button>
             </div>
+            </div>
+            </form>
           </div>
           <p>
             Open API endpoints:
-            <button type="button" className="btn btn-link">
-              /artists
+            <button
+              type="button"
+              className="btn btn-link"
+              onClick={() => this.changeInput(0)}
+            >
+              /artists/1/albums
             </button>
-            <button type="button" className="btn btn-link">
-              /albums/2
+            <button
+              type="button"
+              className="btn btn-link"
+              onClick={() => this.changeInput(1)}
+            >
+              /artists/1/albums/3/songs
             </button>
-            <button type="button" className="btn btn-link">
-              /artists/1/albums/3/
-            </button>
-            <button type="button" className="btn btn-link">
-              /quotes
+            <button
+              type="button"
+              className="btn btn-link"
+              onClick={() => this.changeInput(2)}
+            >
+              /artists/1/quotes
             </button>
           </p>
           <ApiResponse api={this.state.demoCall} />

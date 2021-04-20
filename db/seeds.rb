@@ -24,7 +24,8 @@ RecordLabel.create!([
   { name: "Universal Island Records Ltd.", album_id: 5 },
   { name: "Universal Island Records Ltd.", album_id: 6 },
   { name: "Universal Island Records Ltd.", album_id: 7 },
-  { name: "Universal Island Records Ltd.", album_id: 8 }
+  { name: "Universal Island Records Ltd.", album_id: 8 },
+  { name: "Universal Island Records Ltd.", album_id: 9 }
 
 ])
 
