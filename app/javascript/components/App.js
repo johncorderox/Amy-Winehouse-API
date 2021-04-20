@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
 import Navbar from './Navbar'
-
 import ApiInformation from './ApiInformation'
+import Footer from './Footer'
 
 import AlbumInfoContainer from '../containers/AlbumInfoContainer'
 import DemoContainer from '../containers/DemoContainer'
@@ -17,6 +17,7 @@ class App extends Component {
           <DemoContainer />
           <AlbumInfoContainer />
           </div>
+          <Footer />
       </div>
     )
   }

@@ -19,7 +19,7 @@ module ApiTokenValidator
       "message" => "This action requires a valid API Token.",
       "solution" => "Register an Account to generate an API token. (401)",
       "documentation_url" => "https://github.com/johncorderox/Amy-Winehouse-API",
-      "status" => 401
+      "status" => 401,
     }
     render json: hash, status: :unauthorized
   end
