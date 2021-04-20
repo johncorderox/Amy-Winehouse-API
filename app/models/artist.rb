@@ -20,4 +20,5 @@ class Artist < ApplicationRecord
 
   has_one_attached :press_photo
   has_one_attached :signature
+  has_one_attached :logo
 end

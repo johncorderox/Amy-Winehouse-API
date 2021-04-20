@@ -92,7 +92,7 @@ export class ApiInput extends React.Component {
               onChange={this.handleChange}
             />
             <div className="input-group-append">
-              <button className="btn btn-info" type="submit">
+              <button className="btn btn-primary" type="submit">
                 Submit
               </button>
             </div>

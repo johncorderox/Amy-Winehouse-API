@@ -13,7 +13,14 @@
  *= require_tree .
  *= require_self
  */
+.logo {
+  width: 600px;
+  margin-bottom: 20px;
+}
 
+.logo-nav {
+  width: 250px;
+}
  .amy-container {
    width: 1400px;
     margin:0 auto;
@@ -47,6 +54,7 @@
 .card {
   width: 18rem;
   margin: 30px;
+  height: 390px;
 }
 .authform {
   margin: 0 auto;

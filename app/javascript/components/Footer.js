@@ -26,11 +26,6 @@ export class Footer extends React.Component {
                   </li>
                   <li>
                     <a href="#!" className="text-dark">
-                      Biography
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" className="text-dark">
                       Sign Up
                     </a>
                   </li>

@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Logo from '../images/logo.png'
+
 
 
 class Navbar extends React.Component {
@@ -9,7 +11,10 @@ class Navbar extends React.Component {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a className="navbar-brand" href="/">Amy Winehouse API 🎀</a>
+          <a className="navbar-brand" href="/">
+            <img className="logo-nav" src={Logo} alt="logo" />
+
+            </a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -20,9 +25,6 @@ class Navbar extends React.Component {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href={DOCUMENTATION_URL}>API Documentation</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/users/sign_in">Biography</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/users/sign_in">Sign In</a>
