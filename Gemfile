@@ -15,6 +15,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'annotate'
+gem 'sidekiq', '~> 6.1.3'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -25,12 +26,12 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
   gem 'spring'
-  gem "hirb"
-  gem "rubocop"
-  gem "rubocop-rails", "~> 2.8.1"
-  gem "brakeman"
-  gem "bullet"
-  gem "rails-erd"
-  gem "seed_dump"
-  gem "standard"
+  gem 'hirb'
+  gem 'rubocop'
+  gem 'rubocop-rails', '~> 2.8.1'
+  gem 'brakeman'
+  gem 'bullet'
+  gem 'rails-erd'
+  gem 'seed_dump'
+  gem 'standard'
 end
