@@ -1,57 +1,40 @@
-import React from 'react'
+import React from "react";
+import Album from "../components/Album"
 
 export class AlbumInfoContainer extends React.Component {
-
   constructor(props) {
-     super(props);
-     this.state = {
-       album: [],
-       tracks: []
-     };
-   }
-
-  componentDidMount(){
-    fetch("/api/v1/artists/1/albums")
-    .then(resp => resp.json())
-    .then(a => {
-      this.setState({
-        album: a
-      })
-    })
-    .catch(error => console.log(error))
-
+    super(props);
+    this.state = {
+      album: []
+    };
   }
 
-  getSongs = (id) => {
-    fetch("/api/v1/artists/1/albums/"+id+"/songs")
-    .then(resp => resp.json())
-    .then(songs => {
-      this.setState({
-        tracks: songs
-      });
-    })
-    .catch(error => console.log(error))
+  componentDidMount() {
+    fetch("/api/v1/artists/1/albums")
+      .then((resp) => resp.json())
+      .then((a) => {
+        this.setState({
+          album: a,
+        });
+      })
+      .catch((error) => console.log(error));
   }
 
   render() {
+    const API_URL = "https://amy-winehouse-api.com/api/v1/";
     let albums = this.state.album;
     return (
       <div>
+        <br /> <br />
+        <h2>Example API GET request:</h2>
+        <a href={API_URL+"api/v1/artists/1/albums"}>{API_URL+"api/v1/artists/1/albums"}</a>
         <div className="row">
-          {albums.map(a =>
-            <div className="card" key={a.id}>
-            <img className="card-img-top" src={a.album_cover} onClick={() => this.getSongs(a.id)} />
-            <div className="card-body">
-              <p className="card-text">{a.name}</p>
-              <p className="card-text"><b>Released: </b>{a.release_date}</p>
-            </div>
-          </div>
-         )
-        }
+          {albums.map((a) => (
+            <Album info={a} />
+          ))}
         </div>
       </div>
-  )
-}
-
+    );
+  }
 }
 export default AlbumInfoContainer;

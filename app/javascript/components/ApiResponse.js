@@ -7,7 +7,7 @@ export class ApiResponse extends React.Component {
   }
 
   render() {
-    const JSONPrettyMon = require('react-json-pretty/dist/monikai');
+    const JSONPrettyMon = require('react-json-pretty/dist/acai');
     return (
       <div>
         <div className="form-group text-left">
