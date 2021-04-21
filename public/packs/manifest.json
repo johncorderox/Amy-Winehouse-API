@@ -12,14 +12,14 @@
     },
     "index": {
       "js": [
-        "/packs/js/index-5e15771005fa2cde5b8e.js"
+        "/packs/js/index-fe2810d0e4b54b2fa8ab.js"
       ],
       "js.map": [
-        "/packs/js/index-5e15771005fa2cde5b8e.js.map"
+        "/packs/js/index-fe2810d0e4b54b2fa8ab.js.map"
       ]
     }
   },
-  "index.js": "/packs/js/index-5e15771005fa2cde5b8e.js",
-  "index.js.map": "/packs/js/index-5e15771005fa2cde5b8e.js.map",
+  "index.js": "/packs/js/index-fe2810d0e4b54b2fa8ab.js",
+  "index.js.map": "/packs/js/index-fe2810d0e4b54b2fa8ab.js.map",
   "media/images/logo.png": "/packs/media/images/logo-f4da0c298f826e7ecececb07463357b4.png"
 }

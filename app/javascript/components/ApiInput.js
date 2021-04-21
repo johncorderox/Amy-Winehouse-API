@@ -6,7 +6,7 @@ export class ApiInput extends React.Component {
     super(props);
     this.state = {
       demoCall: [],
-      apiInput: "",
+      apiInput: "artists/1",
     };
   }
 
@@ -99,7 +99,7 @@ export class ApiInput extends React.Component {
             </div>
             </form>
           </div>
-          <p>
+          <p className="text-left">
             Open API endpoints:
             <button
               type="button"
@@ -123,6 +123,10 @@ export class ApiInput extends React.Component {
               /artists/1/quotes
             </button>
           </p>
+          <p className="text-left">Direct link to results: <a href={API_URL+this.state.apiInput}>{API_URL+this.state.apiInput}</a></p>
+
+
+
           <ApiResponse api={this.state.demoCall} />
         </div>
       </div>
