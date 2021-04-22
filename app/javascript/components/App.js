@@ -7,6 +7,8 @@ import Footer from "./Footer";
 import AlbumInfoContainer from "../containers/AlbumInfoContainer";
 import DemoContainer from "../containers/DemoContainer";
 
+const dotenv = require('dotenv').config()
+
 class App extends Component {
   render() {
     return (

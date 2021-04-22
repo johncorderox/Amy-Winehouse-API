@@ -2,6 +2,7 @@ module Api
   module V1
     class RecordLabelsController < ApplicationController
       include Errors
+      include ApiTokenValidator
 
       def index
         render json: labels, status: :ok

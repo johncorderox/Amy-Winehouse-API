@@ -2,6 +2,7 @@ import React from "react";
 import Album from "../components/Album"
 
 export class AlbumInfoContainer extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -10,7 +11,15 @@ export class AlbumInfoContainer extends React.Component {
   }
 
   componentDidMount() {
-    fetch("/api/v1/artists/1/albums")
+    const api_key = process.env.REACT_APP_AMY_API_KEY
+
+    fetch("/api/v1/artists/1/albums", {
+      method: 'GET',
+      headers: {
+        'X-Api-Key': api_key,
+        'Accept': 'application/json'
+      }
+    })
       .then((resp) => resp.json())
       .then((a) => {
         this.setState({

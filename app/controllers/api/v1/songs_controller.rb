@@ -2,6 +2,7 @@ module Api
   module V1
     class SongsController < ApplicationController
       include Errors
+      include ApiTokenValidator
 
       def index
         render json: songs, status: :ok

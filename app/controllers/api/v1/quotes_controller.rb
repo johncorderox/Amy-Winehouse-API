@@ -2,6 +2,7 @@ module Api
   module V1
     class QuotesController < ApplicationController
       include Errors
+      include ApiTokenValidator
 
       def index
         render json: quotes, status: :ok

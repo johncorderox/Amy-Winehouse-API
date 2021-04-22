@@ -2,6 +2,7 @@ module Api
   module V1
     class AlbumsController < ApplicationController
       include Errors
+      include ApiTokenValidator
 
       def index
         render json: albums, status: :ok

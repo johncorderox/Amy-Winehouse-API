@@ -11,7 +11,15 @@ export class DemoContainer extends React.Component {
   }
 
   componentDidMount() {
-    fetch("/api/v1/artists/1")
+    const api_key = process.env.REACT_APP_AMY_API_KEY
+    
+    fetch("/api/v1/artists/1/", {
+      method: 'GET',
+      headers: {
+        'X-Api-Key': api_key,
+        'Accept': 'application/json'
+      }
+    })
       .then((resp) => resp.json())
       .then((a) => {
         this.setState({
