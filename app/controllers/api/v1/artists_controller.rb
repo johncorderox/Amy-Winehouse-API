@@ -3,7 +3,7 @@ module Api
     class ArtistsController < ApplicationController
       include Errors
       include ApiTokenValidator
-      
+
       def index
         render json: artists, status: :ok
       end

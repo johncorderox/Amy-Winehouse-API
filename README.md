@@ -4,15 +4,15 @@
 </p>
 
 
-This project was a self-made API since I truly love the music of Amy. The API can call record labels, songs, albums, and active members for the band. Not only was the project pushed myself to learn more about RESTful development, it also makes other programmers who lover her music the ability to collaborate. 
+This project was a self-made API since I truly love the music of Amy. The API can call record labels, songs, albums, and active members for the band. Not only was the project pushed myself to learn more about RESTful development, it also makes other programmers who lover her music the ability to collaborate.
 
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
 - Ruby 2.6.4
 - A mac OSX machine (Mojave 10.15.7+) OR Ubuntu (16.04+)
 
-## Installing 
-Installing the API locally is easy. You can clone the repo to your desired destination: 
+## Installing
+Installing the API locally is easy. You can clone the repo to your desired destination:
 
 ```bash
  cd ~/Desktop && git clone https://github.com/johncorderox/Amy-Winehouse-API.git && cd bundle install && rails db:drop && rails db:create && rails db:migrate && rails db:seed && rails s
@@ -47,6 +47,20 @@ $ curl -H "X-Api-Key: YOUR_API_KEY_HERE" http://localhost:3000/api/v1/artists/1 
 
 
 ## API open endpoints
+
+The AW-API contains mostly nested routes when using an API Key. You may consult the `root controller` of the API to determine proper data retrieval.
+
+```ruby
+information = {
+  artist: "/api/v1/artists/(.:format(:id))",
+  albums: "/api/v1/artists/(.:format(:id)/albums",
+  songs: "/api/v1/artists/(.:format(:id)/albums/(.:format(:id)/songs",
+  record_labels: "/api/v1/artists/(.:format(:id)/albums/(.:format(:id)/record_labels",
+  quotes: "/api/v1/artists/(.:format(:id)/quotes",
+  messages: "/api/v1/messages"
+}
+```
+
 | HTTP method | URI path              | Description                           |
 |-------------|-----------------------|---------------------------------------|
 | GET         | /artists/:id          | Retrieves Artist information          |
@@ -54,7 +68,7 @@ $ curl -H "X-Api-Key: YOUR_API_KEY_HERE" http://localhost:3000/api/v1/artists/1 
 | GET         | /songs                | Retrieves/Creates Song information    |
 | GET         | /quotes               | Retrieves/Creates Artist Quotes       |
 | GET         | /labels               | Retrieves Record Labels               |
-| GET         | /albums/:id           | Retrieves Album release Label         |
+| GET         | /messages             | Retrieves Messages                    |
 
 Contributing
 ------------
@@ -67,6 +81,25 @@ In general, we follow the "fork-and-pull" Git workflow.
  5. Submit a **Pull request** so that we can review your changes
 
 NOTE: Be sure to tag @johncorderox so I can get notified for pull requests!
+
+## LICENSE
+```
+BSD 2-Clause License
+
+Copyright (c) 2021, John Cordero
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+   ```
+
 ## Author
 
 **John Cordero** © [johncorderox](https://johncorderox.com), Released under the [MIT](./LICENSE) License.<br>
