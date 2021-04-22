@@ -28,6 +28,8 @@ class User < ApplicationRecord
   validates :api_token, uniqueness: true
   validates :email, uniqueness: { case_sensitive: false }
 
+  has_many :messages
+
   private
 
   def generate_api_key
