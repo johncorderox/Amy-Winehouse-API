@@ -45,7 +45,7 @@ $ curl -H "X-Api-Key: YOUR_API_KEY_HERE" http://localhost:3000/api/v1/artists/1 
 }
 ```
 
-
+<br>
 ## API open endpoints
 
 The AW-API contains mostly nested routes when using an API Key. You may consult the `root controller` of the API to determine proper data retrieval.
@@ -60,6 +60,7 @@ information = {
   messages: "/api/v1/messages"
 }
 ```
+<br>
 
 | HTTP method | URI path              | Description                           |
 |-------------|-----------------------|---------------------------------------|
