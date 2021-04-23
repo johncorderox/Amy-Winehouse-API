@@ -32,7 +32,7 @@ export class ApiInput extends React.Component {
 
   componentDidMount() {
     const api_key = process.env.REACT_APP_AMY_API_KEY
-    
+
     fetch("/api/v1/artists/1", {
       method: 'GET',
       headers: {

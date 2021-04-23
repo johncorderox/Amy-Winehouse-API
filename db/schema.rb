@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_14_183000) do
+ActiveRecord::Schema.define(version: 2021_04_22_212453) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,14 @@ ActiveRecord::Schema.define(version: 2021_04_14_183000) do
     t.string "website"
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.string "text"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
   create_table "quotes", force: :cascade do |t|
     t.text "quote"
     t.bigint "artist_id", null: false
@@ -115,6 +123,7 @@ ActiveRecord::Schema.define(version: 2021_04_14_183000) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "albums", "artists"
   add_foreign_key "albums", "record_labels"
+  add_foreign_key "messages", "users"
   add_foreign_key "quotes", "artists"
   add_foreign_key "record_labels", "albums"
   add_foreign_key "songs", "albums"
