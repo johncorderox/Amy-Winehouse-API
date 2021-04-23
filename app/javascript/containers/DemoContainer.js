@@ -2,7 +2,6 @@ import React from "react";
 import JSONPretty from "react-json-pretty";
 import ApiInput from "../components/ApiInput";
 
-
 export class DemoContainer extends React.Component {
   constructor() {
     super();
@@ -35,7 +34,6 @@ export class DemoContainer extends React.Component {
       <div>
         <div className="row">
           <div className="demo-container text-center col-md-12">
-
             <h2>Try it Out!</h2>
             <br /> <br />
             <ApiInput />

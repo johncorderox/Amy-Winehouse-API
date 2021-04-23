@@ -4,30 +4,20 @@ class Tabs extends React.Component {
   render() {
     return (
       <div>
-        <ul className="nav nav-tabs">
+        <ul className="nav nav-tabs tabs mt-5">
           <li className="nav-item">
             <a className="nav-link active" aria-current="page" href="#">
-              Active
+              Example Album request
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">
-              Link
+              Example Artist Bio Page
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">
-              Link
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              className="nav-link disabled"
-              href="#"
-              tabIndex="-1"
-              aria-disabled="true"
-            >
-              Disabled
+              Song Data
             </a>
           </li>
         </ul>

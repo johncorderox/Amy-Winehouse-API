@@ -1,8 +1,10 @@
 module ApiTokenValidator
   extend ActiveSupport::Concern
 
+  VALIDATE_TOKEN_ENDPOINTS = [:index, :show].freeze
+
   included do
-    before_action :validate_token!, only: %i[index show]
+    before_action :validate_token!, only: VALIDATE_TOKEN_ENDPOINTS
   end
 
   def validate_token!
