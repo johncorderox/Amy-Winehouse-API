@@ -1,8 +1,10 @@
 module ApiTokenValidator
   extend ActiveSupport::Concern
 
+  VALIDATE_TOKEN_ENDPOINTS = [:index, :show].freeze
+
   included do
-    before_action :validate_token!, only: %i[index show]
+    before_action :validate_token!, only: VALIDATE_TOKEN_ENDPOINTS
   end
 
   def validate_token!
@@ -19,7 +21,7 @@ module ApiTokenValidator
       "message" => "This action requires a valid API Token.",
       "solution" => "Register an Account to generate an API token. (401)",
       "documentation_url" => "https://github.com/johncorderox/Amy-Winehouse-API",
-      "status" => 401,
+      "status" => 401
     }
     render json: hash, status: :unauthorized
   end
