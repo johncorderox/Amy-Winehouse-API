@@ -4,9 +4,8 @@ import Navbar from "./Navbar";
 import ApiInformation from "./ApiInformation";
 import Footer from "./Footer";
 
-import AlbumInfoContainer from "../containers/AlbumInfoContainer";
 import DemoContainer from "../containers/DemoContainer";
-import ExampleContainer from "../containers/ExampleContainer";
+import AlbumInfoContainer from "../containers/AlbumInfoContainer";
 
 const dotenv = require('dotenv').config()
 
@@ -19,7 +18,6 @@ class App extends Component {
         <div className="amy-container">
           <DemoContainer />
           <AlbumInfoContainer />
-          <ExampleContainer />
         </div>
         <Footer />
       </div>

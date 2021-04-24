@@ -15,5 +15,6 @@ Rails.application.routes.draw do
       match '*unmatched_route' => 'root#index', via: %i[get]
     end
   end
+  get "/data" => "home#data"
   root "home#index"
 end
