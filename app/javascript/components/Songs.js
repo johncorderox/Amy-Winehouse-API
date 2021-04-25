@@ -40,7 +40,6 @@ export class Songs extends React.Component {
         Accept: "application/json"
       },
     })
-      .then((resp) => resp.json())
       .then((a) => {
 
         var freshSongs = this.state.songs.filter((song) => {
