@@ -8,7 +8,7 @@ Rails.application.routes.draw do
         resources :quotes, only: [:index, :show]
         resources :albums do
         resources :record_labels, only: [:index]
-          resources :songs, only: [:index, :show] do
+          resources :songs, only: [:index, :show, :destroy] do
           end
         end
       end

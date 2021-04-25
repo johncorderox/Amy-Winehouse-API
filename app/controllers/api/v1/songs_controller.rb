@@ -12,6 +12,12 @@ module Api
         render json: song, status: :ok
       end
 
+      def destroy
+        song = Song.find params[:id]
+        song.destroy
+        head 204
+      end
+
       private
 
       def song
