@@ -52,13 +52,11 @@ export class Songs extends React.Component {
       .catch((error) => console.log(error));
   }
 
-
-
   render() {
     return <div>
        {this.state.songs.map(obj =>
          <ul>
-          <li key={obj.id}>{obj.name} <button onClick={() => this.handleDelete(obj.id)}>Delete</button></li>
+          <li key={obj.id}>{obj.name} <button className="btn btn-warning" onClick={() => this.handleDelete(obj.id)}>Delete</button></li>
          </ul>
        )}
     </div>;
