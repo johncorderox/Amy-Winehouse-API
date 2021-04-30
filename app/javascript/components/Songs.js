@@ -6,14 +6,10 @@ export class Songs extends React.Component {
     this.state = {
       messages: [],
       text: "",
-      uid: 1,
-      query: "",
-      filteredData: []
+      uid: 1
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-  const [searchTerm, setSearchTerm] = useState("");
 
   componentDidMount() {
     const api_key = process.env.REACT_APP_AMY_API_KEY;
@@ -101,7 +97,6 @@ export class Songs extends React.Component {
   render() {
     return (
       <div>
-        <input type="text" className="input" placeholder="Search..." value={this.state.query} onChange={(e) => setSearchTerm(e.target.value)}/>
         {this.state.messages.map((obj) => (
           <ul>
             <li key={obj.id}>
