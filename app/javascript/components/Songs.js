@@ -4,17 +4,21 @@ export class Songs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      songs: [],
-      name: "",
-      length: 0.0,
-      album_id: null,
+      messages: [],
+      text: "",
+      uid: 1,
+      query: "",
+      filteredData: []
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  const [searchTerm, setSearchTerm] = useState("");
 
   componentDidMount() {
     const api_key = process.env.REACT_APP_AMY_API_KEY;
 
-    fetch("api/v1/artists/1/albums/1/songs", {
+    fetch("messages", {
       method: "GET",
       headers: {
         "X-Api-Key": api_key,
@@ -24,7 +28,7 @@ export class Songs extends React.Component {
       .then((resp) => resp.json())
       .then((a) => {
         this.setState({
-          songs: a,
+          messages: a,
         });
       })
       .catch((error) => console.log(error));
@@ -34,7 +38,7 @@ export class Songs extends React.Component {
     const api_key = process.env.REACT_APP_AMY_API_KEY;
     const token = document.querySelector('meta[name="csrf-token"]').content;
 
-    fetch("api/v1/artists/1/albums/1/songs/" + id, {
+    fetch("messages/" + id, {
       method: "DELETE",
       headers: {
         "X-Api-Key": api_key,
@@ -43,11 +47,11 @@ export class Songs extends React.Component {
       },
     })
       .then((a) => {
-        var freshSongs = this.state.songs.filter((song) => {
-          return song.id != id;
+        var freshMessages = this.state.messages.filter((mess) => {
+          return mess.id != id;
         });
 
-        this.setState({ songs: freshSongs });
+        this.setState({ messages: freshMessages });
       })
       .catch((error) => console.log(error));
   };
@@ -61,17 +65,47 @@ export class Songs extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state.name);
-    console.log(this.state.length);
+
+    const api_key = process.env.REACT_APP_AMY_API_KEY;
+    const token = document.querySelector('meta[name="csrf-token"]').content;
+
+    var text = this.state.text;
+    var uid = this.state.uid;
+    console.log(text);
+    console.log(uid);
+
+    fetch("/messages", {
+      method: "POST",
+      headers: {
+        "X-Api-Key": api_key,
+        "Content-Type": "application/json",
+        "X-CSRF-Token": token,
+      },
+      body: JSON.stringify({ "message": {
+        "text" : text,
+        "user_id" : uid
+      }}),
+    })
+      .then((resp) => resp.json())
+      .then((b) => {
+        var newState = this.state.messages.concat(b);
+        this.setState({ messages: newState })
+        console.log(b);
+        this.state.text = "";
+      })
+      .catch((error) => console.log(error));
+
   }
+
 
   render() {
     return (
       <div>
-        {this.state.songs.map((obj) => (
+        <input type="text" className="input" placeholder="Search..." value={this.state.query} onChange={(e) => setSearchTerm(e.target.value)}/>
+        {this.state.messages.map((obj) => (
           <ul>
             <li key={obj.id}>
-              {obj.name}{" "}
+              {obj.text}{" "}
               <button
                 className="btn btn-warning"
                 onClick={() => this.handleDelete(obj.id)}
@@ -85,21 +119,16 @@ export class Songs extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
-            placeholder="Name"
-            value={this.state.name}
-            onChange={this.update("name")}
+            placeholder="text"
+            value={this.state.text}
+            onChange={this.update("text")}
           />{" "}
           <br />
-          <input
-            type="number"
-            placeholder="Song Length"
-            value={this.state.length}
-            onChange={this.update("length")}
-          />
           <br />
           <button type="submit" className="btn btn-info">
             Add New Song
           </button>
+          <button onClick={this.handleEdit}>Edit</button>
         </form>
       </div>
     );

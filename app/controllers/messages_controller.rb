@@ -1,6 +1,4 @@
-module Api
-  module V1
-    class MessagesController < ApplicationController
+  class MessagesController < ApplicationController
 
       def index
         render json: messages, status: :ok
@@ -24,8 +22,6 @@ module Api
       end
 
       def message_params
-        params.require(:message).permit(:text)
+        params.require(:message).permit(:text, :user_id)
       end
     end
-  end
-end
