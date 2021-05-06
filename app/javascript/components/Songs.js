@@ -107,6 +107,7 @@ export class Songs extends React.Component {
               >
                 Delete
               </button>
+              <button onClick={this.handleEdit}>Edit</button>
             </li>
           </ul>
         ))}
@@ -123,7 +124,6 @@ export class Songs extends React.Component {
           <button type="submit" className="btn btn-info">
             Add New Song
           </button>
-          <button onClick={this.handleEdit}>Edit</button>
         </form>
       </div>
     );
