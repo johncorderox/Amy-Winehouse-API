@@ -1,6 +1,12 @@
 import React from "react";
 import JSONPretty from "react-json-pretty";
 import ApiInput from "../components/ApiInput";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Sig from '../images/signature.png'
+
+import ApiInformation from "../components/ApiInformation";
+
 
 export class DemoContainer extends React.Component {
   constructor() {
@@ -11,14 +17,14 @@ export class DemoContainer extends React.Component {
   }
 
   componentDidMount() {
-    const api_key = process.env.REACT_APP_AMY_API_KEY
+    const api_key = process.env.REACT_APP_AMY_API_KEY;
 
     fetch("/api/v1/artists/1/", {
-      method: 'GET',
+      method: "GET",
       headers: {
-        'X-Api-Key': api_key,
-        'Accept': 'application/json'
-      }
+        "X-Api-Key": api_key,
+        Accept: "application/json",
+      },
     })
       .then((resp) => resp.json())
       .then((a) => {
@@ -32,14 +38,22 @@ export class DemoContainer extends React.Component {
   render() {
     return (
       <div>
-        <div className="row">
-          <div className="demo-container text-center col-md-12">
-            <h2>Try it Out!</h2>
-            <br /> <br />
-            <ApiInput />
+        <Navbar />
+        <ApiInformation />
+        <div className="amy-container">
+          <div className="row">
+            <div className="demo-container text-center col-md-12">
+              <h2>Try it Out!</h2>
+              <br /> <br />
+              <ApiInput />
+            </div>
           </div>
+          <div className="text-center">
+                  <img className="sig" src={Sig} alt="sig" />
+          </div>
+        </div>
+        <Footer />
       </div>
-    </div>
     );
   }
 }
