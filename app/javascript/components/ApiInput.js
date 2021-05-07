@@ -42,9 +42,9 @@ export class ApiInput extends React.Component {
     })
       .then((resp) => resp.json())
       .then((a) => {
-        this.setState({
-          demoCall: a,
-        });
+        // this.setState({
+        //   demoCall: a,
+        // });
       })
       .catch((error) => console.log(error));
   }
