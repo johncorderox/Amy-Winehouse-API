@@ -31,6 +31,11 @@ class Navbar extends React.Component {
                 </a>
               </li>
               <li className="nav-item">
+                <a className="nav-link" href="/data">
+                  Example JSON Data
+                </a>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link" href={DOCUMENTATION_URL}>
                   API Documentation
                 </a>

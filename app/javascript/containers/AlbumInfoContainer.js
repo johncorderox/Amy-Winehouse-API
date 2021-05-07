@@ -1,6 +1,9 @@
 import React from "react";
 import Album from "../components/Album"
 
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 export class AlbumInfoContainer extends React.Component {
 
   constructor(props) {
@@ -13,7 +16,7 @@ export class AlbumInfoContainer extends React.Component {
   componentDidMount() {
     const api_key = process.env.REACT_APP_AMY_API_KEY
 
-    fetch("/api/v1/artists/1/albums", {
+    fetch("/api/v1/artists/", {
       method: 'GET',
       headers: {
         'X-Api-Key': api_key,
@@ -34,6 +37,7 @@ export class AlbumInfoContainer extends React.Component {
     let albums = this.state.album;
     return (
       <div>
+        <Navbar />
         <br /> <br />
         <h2>Example API GET request:</h2>
         <a href={API_URL+"api/v1/artists/1/albums"}>{API_URL+"api/v1/artists/1/albums"}</a>
@@ -42,6 +46,7 @@ export class AlbumInfoContainer extends React.Component {
             <Album info={a} />
           ))}
         </div>
+        <Footer />
       </div>
     );
   }

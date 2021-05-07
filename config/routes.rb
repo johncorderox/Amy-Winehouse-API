@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "home#index"
   resources :messages, only: [:index, :create, :destroy]
   devise_for :users
   namespace :api do
@@ -12,9 +13,10 @@ Rails.application.routes.draw do
           end
         end
       end
-      match '*unmatched_route' => 'root#index', via: %i[get]
     end
   end
-  get "/data" => "home#data"
-  root "home#index"
+  match '*unmatched_route' => 'home#index', via: :all
+  get "*path" => redirect('/'), constraints: lambda { |req|
+  req.path.exclude? 'rails/active_storage'
+}
 end
