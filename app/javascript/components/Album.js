@@ -9,18 +9,13 @@ export class Album extends React.Component {
     return (
       <div>
         <br /> <br />
-<div className="text-center">
-  {this.props.info.name}
+        <div className="text-center">
+          {this.props.info.name}
 
+          {this.props.info.date_of_birth}
 
-                  {this.props.info.date_of_birth}
-
-
-              <img src={this.props.info.press_photo} />
-
-
-</div>
-
+          <img src={this.props.info.press_photo} />
+        </div>
       </div>
     );
   }

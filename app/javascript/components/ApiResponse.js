@@ -34,7 +34,7 @@ export class ApiResponse extends React.Component {
         <div className="form-group text-left">
           <JSONPretty
             id="json-pretty"
-            data={this.props.a}
+            data={this.props.artist}
             space="4"
             theme={JSONPrettyMon}
           ></JSONPretty>
