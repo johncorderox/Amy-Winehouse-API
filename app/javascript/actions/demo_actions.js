@@ -2,12 +2,11 @@ export const GET_ARTIST = "GET_ARTIST";
 
 {
   type: GET_ARTIST,
-  console.log("Action called");
   payload: {
-    description: 'Get the Artist of id: 1'
+    description: 'Get the Artist'
   }
 }
 
-export function getArtist() {
+export function getArtist(a) {
   return { type: GET_ARTIST, artist: a }
 }
