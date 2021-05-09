@@ -5,7 +5,7 @@ import {Provider} from "react-redux"
 import configureStore from '../store/store';
 
 import DemoContainer from "../containers/DemoContainer";
-import AlbumInfoContainer from "../containers/AlbumInfoContainer";
+import Data from "./Data";
 
 const dotenv = require("dotenv").config();
 const store = configureStore();
@@ -20,7 +20,7 @@ class App extends Component {
               <Route exact path="/">
                 <DemoContainer />
               </Route>
-              <Route path="/data" exact component={AlbumInfoContainer} />
+              <Route path="/data" exact component={Data} />
             </Switch>
           </BrowserRouter>
         </Provider>

@@ -16,7 +16,4 @@ Rails.application.routes.draw do
     end
   end
   match '*unmatched_route' => 'home#index', via: :all
-  get "*path" => redirect('/'), constraints: lambda { |req|
-  req.path.exclude? 'rails/active_storage'
-}
 end

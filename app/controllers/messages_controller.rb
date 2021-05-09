@@ -38,3 +38,4 @@
         { errors: record.errors.messages }
       end
     end
+end
