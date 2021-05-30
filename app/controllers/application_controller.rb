@@ -13,6 +13,21 @@ class ApplicationController < ActionController::Base
     return edit_user_registration_path
   end
 
+  helper_method :amy_cache, :small_cache, :big_cache
+
+  def amy_cache(time)
+    if session[:user_id].nil?
+      headers['Cache-Control'] = "max-age=#{time}, public"
+  end
+
+  def small_cache
+    amy_cache(60.seconds)
+  end
+
+  def big_cache
+    amy_cache(60.minutes)
+  end
+
   def render_not_found
     hash = {
       "status" => 404,
