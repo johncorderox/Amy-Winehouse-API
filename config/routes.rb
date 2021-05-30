@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-#  resources :messages, only: [:index, :create, :destroy]
   devise_for :users
   namespace :api do
     namespace :v1 do
@@ -14,5 +13,4 @@ Rails.application.routes.draw do
       end
     end
   end
-#  match '*unmatched_route' => 'home#index', via: :all
 end
