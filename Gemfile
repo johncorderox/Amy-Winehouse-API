@@ -5,7 +5,7 @@ ruby '2.7.0'
 
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 gem 'sqlite3', '~> 1.4'
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 5.5'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise'
 gem 'annotate'
